@@ -5,6 +5,7 @@
 	<include file="Includes_MusicOverlay.xml" />
 	<include file="Includes_Home1.xml" />
 	<include file="Includes_Home2.xml" />
+	<include file="Includes_Home3.xml" />
 	<include file="Includes_HomeDeck.xml" />
 	<include file="Includes_MediaFlags.xml" />
 	<include file="Includes_MediaFlags2.xml" />
@@ -318,7 +319,7 @@
 	<include name="Global_TimeWeekdayDetails">
 		<posx>1241</posx>
 		<posy>546</posy>
-		<width>200</width>
+		<width>220</width>
 		<height>30</height>
 		<font>METF_Date</font>
 		<align>right</align>
@@ -372,6 +373,7 @@
 				<visible>Skin.HasSetting(ShowDate)</visible>
 			</control>
 			<control type="label">
+				<align>right</align>
 				<description>Day of Week</description>
 				<include>Global_TimeWeekdayDetails</include>
 				<label>$INFO[System.Date(DDD)]</label>

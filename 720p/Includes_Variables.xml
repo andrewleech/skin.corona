@@ -226,10 +226,10 @@
 		<value condition="Skin.HasSetting(WeatherIcons2)">$INFO[Window(Weather).Property(Weekend.2.FanartCode),special://skin/extras/weather_icons2/,.png]</value>
 		<value>$INFO[Window(Weather).Property(Weekend.2.FanartCode),special://skin/extras/weather_icons/,.png]</value>
 	</variable>
-	<constant name="WeatherHomeLeft">325</constant>
-	<constant name="WeatherHomeTop">470</constant>
-	<constant name="WeatherHomeHeight">170</constant>
-	<constant name="WeatherHomeWidth">180</constant>
+	<constant name="WeatherHomeLeft">305</constant>
+	<constant name="WeatherHomeTop">510</constant>
+	<constant name="WeatherHomeHeight">180</constant>
+	<constant name="WeatherHomeWidth">160</constant>
 	<constant name="WeatherPanelLeft">210</constant>
 	<constant name="Weather7DayWidth">147</constant>
 	<constant name="Weather7DayHeight">485</constant>
