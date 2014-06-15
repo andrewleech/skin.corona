@@ -3,9 +3,9 @@
 	<!-- Home1 Default-->
 	<visible>!Skin.HasSetting(home2)</visible>
 	<include name="Submenu_VerticalDetails">
-		<posx>1060</posx>
+		<posx>1020</posx>
 		<posy>50</posy>
-		<width>220</width>
+		<width>260</width>
 		<height>416</height>
 		<orientation>vertical</orientation>
 		<align>left</align>
@@ -14,8 +14,8 @@
 		<onright>9000</onright>
 	</include>
 	<include name="Submenu_Button">
-		<width>208</width>
-		<height>32</height>
+		<width>248</width>
+		<height>40</height>
 		<align>left</align>
 		<aligny>center</aligny>
 		<textoffsetx>8</textoffsetx>
@@ -66,17 +66,17 @@
 			<include>Animation_OpenCloseFade</include>
 			<include>Animation_FadedByMenu</include>
 			<control type="image">
-				<posx>240</posx>
+				<posx>280</posx>
 				<posy>50</posy>
-				<width>800</width>
+				<width>720</width>
 				<height>450</height>
 				<texture>frames/ClassicFrame_Background.png</texture>
 				<colordiffuse>FrameBackgroundDiffuse</colordiffuse>
 			</control>
 			<control type="multiimage">
-				<posx>240</posx>
+				<posx>280</posx>
 				<posy>50</posy>
-				<width>800</width>
+				<width>720</width>
 				<height>450</height>
 				<timeperimage>15000</timeperimage>
 				<randomize>true</randomize>
@@ -86,16 +86,16 @@
 				<visible>!Window.IsActive(videooverlay)</visible>
 			</control>
 			<control type="videowindow">
-				<posx>240</posx>
+				<posx>280</posx>
 				<posy>50</posy>
-				<width>800</width>
+				<width>720</width>
 				<height>450</height>
 				<visible>Player.HasVideo</visible>
 			</control>
 			<control type="image">
-				<posx>215</posx>
+				<posx>255</posx>
 				<posy>25</posy>
-				<width>848</width>
+				<width>768</width>
 				<height>507</height>
 				<texture>frames/ClassicFrame_Fanart.png</texture>
 			</control>
@@ -160,7 +160,7 @@
 		<control type="list" id="9000">
 			<posx>0</posx>
 			<posy>50</posy>
-			<width>220</width>
+			<width>260</width>
 			<height>416</height>
 			<onup>9000</onup>
 			<ondown>9000</ondown>
@@ -170,12 +170,12 @@
 			<orientation>vertical</orientation>
 			<include>Animation_OpenCloseFade</include>
 			<include>Animation_FadedByMenu</include>
-			<itemlayout width="200" height="32">
+			<itemlayout width="240" height="40">
 				<control type="label">
 					<posx>215</posx>
 					<posy>0</posy>
-					<width>200</width>
-					<height>32</height>
+					<width>240</width>
+					<height>40</height>
 					<align>right</align>
 					<aligny>center</aligny>
 					<font>METF_HomeMenu</font>
@@ -183,13 +183,13 @@
 					<label>$INFO[ListItem.Label]</label>
 				</control>
 			</itemlayout>
-			<focusedlayout width="220" height="32">
+			<focusedlayout width="220" height="40">
 				<!-- Focus Bar -->
 				<control type="image">
 					<posx>15</posx>
 					<posy>0</posy>
-					<width>208</width>
-					<height>32</height>
+					<width>248</width>
+					<height>40</height>
 					<aligny>center</aligny>
 					<texture flipx="true">FocusLine.png</texture>
 					<colordiffuse>FocusBar</colordiffuse>
@@ -198,8 +198,8 @@
 				<control type="label">
 					<posx>215</posx>
 					<posy>0</posy>
-					<width>200</width>
-					<height>32</height>
+					<width>240</width>
+					<height>40</height>
 					<align>right</align>
 					<aligny>center</aligny>
 					<font>METF_HomeMenu</font>
@@ -210,8 +210,8 @@
 				<control type="label">
 					<posx>215</posx>
 					<posy>0</posy>
-					<width>200</width>
-					<height>32</height>
+					<width>240</width>
+					<height>40</height>
 					<align>right</align>
 					<aligny>center</aligny>
 					<font>METF_HomeMenu</font>

@@ -6,7 +6,7 @@
 			<control type="list" id="905">
 				<viewtype label="$LOCALIZE[418] $LOCALIZE[535]">biglist</viewtype>
 				<posx>360</posx>
-				<posy>348</posy>
+				<posy>308</posy>
 				<width>535</width>
 				<height>175</height>
 				<onup>905</onup>
@@ -179,7 +179,7 @@
 			</control>
 			<!-- Thumbnails -->
 			<control type="group">
-				<posy>-80</posy>
+				<posy>-120</posy>
 				<include>Animation_OpenCloseFade</include>
 				<include>Animation_FadedByMenu</include>
 				<include>Animation_HiddenByInfo</include>
@@ -361,7 +361,7 @@
 			</control>
 			<!-- Info Details -->
 			<control type="group">
-				<posy>-80</posy>
+				<posy>-120</posy>
 				<include>Animation_OpenCloseFade</include>
 				<include>Animation_FadedByMenu</include>
 				<include>Animation_HiddenByInfo</include>

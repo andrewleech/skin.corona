@@ -6,7 +6,7 @@
 			<!-- Browser -->
 			<control type="fixedlist" id="52">
 				<posx>-105</posx>
-				<posy>240</posy>
+				<posy>200</posy>
 				<height>500</height>
 				<width>1400</width>
 				<include condition="!Skin.HasSetting(ViewLockdown)">OnUp7000</include>
@@ -209,8 +209,8 @@
 			<!-- Browser label and flags -->
 			<!-- Title -->
 			<control type="label">
-				<posx>40</posx>
-				<posy>472</posy>
+				<posx>35</posx>
+				<posy>432</posy>
 				<width>1200</width>
 				<height>40</height>
 				<align>center</align>
@@ -224,7 +224,7 @@
 			</control>
 			<control type="grouplist">
 				<posx>40</posx>
-				<posy>505</posy>
+				<posy>465</posy>
 				<width>1200</width>
 				<height>30</height>
 				<align>center</align>
@@ -344,7 +344,7 @@
 			<!-- Movie Sets -->
 			<control type="label">
 				<posx>240</posx>
-				<posy>503</posy>
+				<posy>463</posy>
 				<width>800</width>
 				<height>30</height>
 				<align>center</align>

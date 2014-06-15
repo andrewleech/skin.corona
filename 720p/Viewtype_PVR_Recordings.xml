@@ -5,9 +5,9 @@
 			<description>Recordings group</description>
 			<visible>Control.IsVisible(13)</visible>
 			<control type="list" id="13">
-				<posx>490</posx>
-				<posy>90</posy>
-				<width>710</width>
+				<posx>40</posx>
+				<posy>50</posy>
+				<width>1200</width>
 				<height>434</height>
 				<onleft>34</onleft>
 				<onright>72</onright>
@@ -15,7 +15,7 @@
 				<ondown>13</ondown>
 				<pagecontrol>72</pagecontrol>
 				<scrolltime>200</scrolltime>
-				<itemlayout height="40" width="700">
+				<itemlayout height="40" width="1200">
 					<control type="image">
 						<description>Recording icon</description>
 						<posx>10</posx>
@@ -28,7 +28,7 @@
 						<description>Recording label</description>
 						<posx>50</posx>
 						<posy>0</posy>
-						<width>630</width>
+						<width>1010</width>
 						<height>40</height>
 						<align>left</align>
 						<aligny>center</aligny>
@@ -37,9 +37,9 @@
 					</control>
 					<control type="label">
 						<description>Recording date label</description>
-						<posx>690</posx>
+						<posx>1180</posx>
 						<posy>0</posy>
-						<width>500</width>
+						<width>700</width>
 						<height>40</height>
 						<align>right</align>
 						<aligny>center</aligny>
@@ -47,7 +47,7 @@
 						<info>ListItem.Date</info>
 					</control>
 				</itemlayout>
-				<focusedlayout height="40" width="700">
+				<focusedlayout height="40" width="1200">
 					<control type="image">
 						<description>Focus selection</description>
 						<width>1210</width>
@@ -66,7 +66,7 @@
 						<description>Recording label</description>
 						<posx>50</posx>
 						<posy>0</posy>
-						<width>630</width>
+						<width>1010</width>
 						<height>40</height>
 						<align>left</align>
 						<aligny>center</aligny>
@@ -75,7 +75,7 @@
 					</control>
 					<control type="label">
 						<description>Recording date label</description>
-						<posx>690</posx>
+						<posx>1180</posx>
 						<posy>0</posy>
 						<width>500</width>
 						<height>40</height>
@@ -97,31 +97,6 @@
 				<onright>34</onright>
 				<showonepage>false</showonepage>
 				<orientation>vertical</orientation>
-			</control>
-			<control type="group">
-				<posx>80</posx>
-				<posy>100</posy>
-				<control type="image">
-					<description>Recording icon</description>
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>380</width>
-					<height>270</height>
-					<aspectratio aligny="bottom">keep</aspectratio>
-					<texture fallback="DefaultVideoCover.png">ListItem.Icon</texture>
-				</control>
-				<control type="label">
-					<description>Recording title label</description>
-					<posx>0</posx>
-					<posy>290</posy>
-					<width>380</width>
-					<height>25</height>
-					<scroll>true</scroll>
-					<align>center</align>
-					<aligny>center</aligny>
-					<include>LiveTVLabel</include>
-					<info>ListItem.Title</info>
-				</control>
 			</control>
 			<!-- TV Channel Plot (Bottom) -->
 			<include>LiveTVPlot</include>

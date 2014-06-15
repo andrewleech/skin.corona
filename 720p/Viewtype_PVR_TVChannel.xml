@@ -7,18 +7,18 @@
 			<visible>Control.IsVisible(11)</visible>
 			<!-- TV Channels list -->
 			<control type="group">
-				<posx>795</posx>
+				<posx>595</posx>
 				<posy>50</posy>
   				<control type="list" id="11">
 	  				<posx>0</posx>
   					<posy>0</posy>
-  					<width>440</width>
-  					<height>490</height>
+  					<width>640</width>
+  					<height>450</height>
   					<onleft>32</onleft>
 	  				<onright>70</onright>
 					<pagecontrol>70</pagecontrol>
 					<scrolltime>200</scrolltime>
-					<itemlayout height="60" width="400">
+					<itemlayout height="60" width="700">
 						<control type="label">	
 							<description>Channel number label</description>
 							<posx>15</posx>
@@ -34,7 +34,7 @@
 							<description>Channel name label</description>
 							<posx>60</posx>
 							<posy>4</posy>
-							<width>300</width>
+							<width>500</width>
 							<height>25</height>
 							<align>left</align>
 							<aligny>center</aligny>
@@ -45,7 +45,7 @@
 							<description>Channel title label</description>
 							<posx>60</posx>
 							<posy>29</posy>
-							<width>300</width>
+							<width>500</width>
 							<height>20</height>
 							<align>left</align>
 							<aligny>center</aligny>
@@ -54,7 +54,7 @@
 						</control>
 						<control type="image">
 							<description>Channel icon</description>
-							<posx>370</posx>
+							<posx>570</posx>
 							<posy>8</posy>
 							<width>50</width>
 							<height>50</height>
@@ -64,18 +64,18 @@
 							<description>Channel progressbar</description>
 							<posx>60</posx>
 							<posy>52</posy>
-							<width>310</width>
+							<width>510</width>
 							<height>6</height>
 							<colordiffuse>88FFFFFF</colordiffuse>
 							<info>ListItem.Progress</info>
 						</control>
 					</itemlayout>
-					<focusedlayout height="60" width="500">
+					<focusedlayout height="60" width="700">
 						<control type="image">
 							<description>Channel focus selection</description>
 							<posx>0</posx>
 							<posy>4</posy>
-							<width>435</width>
+							<width>635</width>
 							<height>62</height>
 							<texture>FocusLine.png</texture>
 							<colordiffuse>FocusBar</colordiffuse>
@@ -95,7 +95,7 @@
 							<description>Channel name label</description>
 							<posx>60</posx>
 							<posy>4</posy>
-							<width>300</width>
+							<width>500</width>
 							<height>25</height>
 							<align>left</align>
 							<aligny>center</aligny>
@@ -106,7 +106,7 @@
 		 					<description>Channel title label</description>
 							<posx>60</posx>
 							<posy>29</posy>
-							<width>300</width>
+							<width>500</width>
 							<height>20</height>
 							<align>left</align>
 							<aligny>center</aligny>
@@ -115,7 +115,7 @@
 						</control>
 						<control type="image">
 							<description>Channel icon</description>
-							<posx>370</posx>
+							<posx>570</posx>
 	 						<posy>8</posy>
 							<width>50</width>
 							<height>50</height>
@@ -125,7 +125,7 @@
 							<description>Channel progressbar</description>
 							<posx>60</posx>
 							<posy>52</posy>
-							<width>310</width>
+							<width>510</width>
 							<height>6</height>
 							<colordiffuse>88FFFFFF</colordiffuse>
 							<info>ListItem.Progress</info>
@@ -156,8 +156,8 @@
 					<description>PVR Display Picture</description>
 					<posx>22</posx>
 					<posy>20</posy>
-					<width>704</width>
-					<height>396</height>
+					<width>504</width>
+					<height>296</height>
 					<texture background="true" diffuse="maskfanart.png" fallback="home_art/livetv.jpg">$INFO[Skin.String(CustomLiveTV)]</texture>
 					<aspectratio aligny="bottom">stretch</aspectratio>
 					<visible>!Player.HasVideo</visible>
@@ -166,8 +166,8 @@
 					<description>PVR Display Window</description>
 					<posx>22</posx>
 					<posy>20</posy>
-					<width>704</width>
-					<height>396</height>
+					<width>504</width>
+					<height>296</height>
 					<aspectratio aligny="bottom">stretch</aspectratio>
 					<texture background="true" diffuse="maskfanart.png"></texture>
 					<visible>Player.HasVideo</visible>
@@ -175,15 +175,15 @@
 				<control type="image">
 					<posx>0</posx>
 					<posy>0</posy>
-					<width>746</width>
-					<height>442</height>
+					<width>546</width>
+					<height>342</height>
 					<texture>frames/ClassicFrame_Fanart.png</texture>
 				</control>
 				<control type="label">
 					<description>Channel start time label</description>
 					<posx>120</posx>
-					<posy>434</posy>
-					<width>110</width>
+					<posy>334</posy>
+					<width>120</width>
 					<height>20</height>
 					<align>right</align>
 					<aligny>center</aligny>
@@ -192,17 +192,17 @@
 				</control>
 				<control type="progress">
 					<description>Channel progress bar</description>
-					<posx>130</posx>
-					<posy>442</posy>
-					<width>480</width>
+					<posx>140</posx>
+					<posy>342</posy>
+					<width>270</width>
 					<height>8</height>
 					<info>Container(11).ListItem.Progress</info>
 				</control>
 				<control type="label">
 					<description>Channel end time label</description>
-					<posx>620</posx>
-					<posy>434</posy>
-					<width>110</width>
+					<posx>420</posx>
+					<posy>334</posy>
+					<width>120</width>
 					<height>20</height>
 					<align>left</align>
 					<aligny>center</aligny>
@@ -211,8 +211,8 @@
 				</control>
 				<control type="label">
 					<posx>0</posx>
-					<posy>468</posy>
-					<width>746</width>
+					<posy>368</posy>
+					<width>546</width>
 					<height>20</height>
 					<align>center</align>
 					<aligny>center</aligny>

@@ -10,8 +10,8 @@
 					<effect type="fade" time="400" start="100" end="0" />
 				</animation>
 				<posx>360</posx>
-				<posy>140</posy>
-				<height>350</height>
+				<posy>100</posy>
+				<height>388</height>
 				<width>850</width>
 				<onup>55</onup>
 				<ondown>55</ondown>
@@ -148,9 +148,9 @@
 					</control>
 					<!-- Episode Count for TVShows -->
 					<control type="label">
-						<posx>730</posx>
+						<posx>700</posx>
 						<posy>-2</posy>
-						<width>120</width>
+						<width>170</width>
 						<height>35</height>
 						<align>right</align>
 						<aligny>center</aligny>
@@ -163,7 +163,7 @@
 					<control type="label">
 						<posx>800</posx>
 						<posy>-2</posy>
-						<width>120</width>
+						<width>170</width>
 						<height>35</height>
 						<align>right</align>
 						<aligny>center</aligny>
@@ -343,9 +343,9 @@
 					</control>
 					<!-- Episode Count for TVShows -->
 					<control type="label">
-						<posx>730</posx>
+						<posx>700</posx>
 						<posy>-2</posy>
-						<width>120</width>
+						<width>170</width>
 						<height>35</height>
 						<align>right</align>
 						<aligny>center</aligny>
@@ -358,7 +358,7 @@
 					<control type="label">
 						<posx>800</posx>
 						<posy>-2</posy>
-						<width>120</width>
+						<width>170</width>
 						<height>35</height>
 						<align>right</align>
 						<aligny>center</aligny>
@@ -408,12 +408,12 @@
 				<control type="group">
 					<visible>Window.IsActive(videolibrary) + [Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons)]</visible>
 					<posx>20</posx>
-					<posy>65</posy>
+					<posy>60</posy>
 					<control type="image">
 						<posx>17</posx>
 						<posy>15</posy>
 						<width>300</width>
-						<height>440</height>
+						<height>400</height>
 						<fadetime>100</fadetime>
 						<texture background="true" diffuse="postermatte.png">$INFO[ListItem.Icon]</texture>
 						<aspectratio scalediffuse="false">keep</aspectratio>
@@ -423,7 +423,7 @@
 						<posx>17</posx>
 						<posy>15</posy>
 						<width>300</width>
-						<height>440</height>
+						<height>400</height>
 						<fadetime>100</fadetime>
 						<texture background="true" fallback="DefaultThumb.png">$VAR[PosterThumb]</texture>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -433,7 +433,7 @@
 						<posx>0</posx>
 						<posy>-10</posy>
 						<width>335</width>
-						<height>490</height>
+						<height>450</height>
 						<texture>frames/ClassicFrame_PosterMedium.png</texture>
 						<visible>!IsEmpty(ListItem.Title)</visible>
 					</control>
@@ -522,7 +522,7 @@
 				<include>Animation_OpenCloseFade</include>
 				<include>Animation_FadedByMenu</include>
 				<include>Animation_HiddenByInfo</include>
-				<posy>95</posy>
+				<posy>55</posy>
 				<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(musicvideos) | Container.Content(artists) | Container.Content(albums) | Container.Content(songs) | [!IsEmpty(ListItem.Property(Addon.Creator)) + Container.Content(addons)]</visible>
 				<include>VisibleIfNotMovieSet</include>
 				<control type="image">
@@ -558,7 +558,7 @@
 				<!-- Genre -->
 				<control type="label">
 					<posx>1245</posx>
-					<width>590</width>
+					<width>500</width>
 					<height>27</height>
 					<align>right</align>
 					<label>$INFO[ListItem.Genre]</label>
@@ -568,7 +568,7 @@
 				</control>
 				<control type="label">
 					<posx>1245</posx>
-					<width>590</width>
+					<width>500</width>
 					<height>27</height>
 					<align>right</align>
 					<label>$INFO[ListItem.Property(Artist_Genre)]</label>
@@ -579,7 +579,7 @@
 				<!-- Year/Duration/Number of Episodes -->
 				<control type="grouplist">
 					<posx>365</posx>
-					<width>300</width>
+					<width>350</width>
 					<align>left</align>
 					<itemgap>10</itemgap>
 					<orientation>horizontal</orientation>
@@ -646,7 +646,7 @@
 				<include>Animation_OpenCloseFade</include>
 				<include>Animation_FadedByMenu</include>
 				<posx>1270</posx>
-				<posy>128</posy>
+				<posy>88</posy>
 				<width>22</width>
 				<height>376</height>
 				<visible allowhiddenfocus="true">Control.HasFocus(998) | Container.Scrolling</visible>
