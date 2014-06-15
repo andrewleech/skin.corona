@@ -348,6 +348,13 @@
 					</control>
 				</focusedchannellayout>
 				<itemlayout height="42" width="40">
+					<control type="image" id="14">
+						<width>40</width>
+						<height>40</height>
+						<texture border="3">epg-genres/$INFO[ListItem.Genre].png</texture>
+						<bordertexture border="-2">black.png</bordertexture>
+						<!-- <texture border="3">epg-genres/Entertainment.png</texture> -->
+					</control>
 					<control type="label" id="1">
 						<posx>10</posx>
 						<posy>0</posy>
@@ -364,7 +371,9 @@
 					<control type="image" id="14">
 						<width>40</width>
 						<height>40</height>
-						<texture>ButtonFo.png</texture>
+						<texture border="3">ButtonFo.png</texture>
+						<bordertexture border="-2">black.png</bordertexture>
+						<!-- <texture border="3">epg-genres/Entertainment.png</texture> -->
 					</control>
 					<control type="label" id="1">
 						<posx>10</posx>

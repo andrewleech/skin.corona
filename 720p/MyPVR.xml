@@ -17,9 +17,9 @@
 			<include>NavMenuBackground</include>
 			<control type="grouplist" id="7000">
 				<posx>470</posx>
-				<posy>120</posy>
+				<posy>100</posy>
 				<width>340</width>
-				<height>548</height>
+				<height>508</height>
 				<itemgap>2</itemgap>
 				<onleft>11</onleft>
 				<onright>11</onright>

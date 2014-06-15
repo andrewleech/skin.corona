@@ -8,7 +8,7 @@
 				<viewtype label="$LOCALIZE[20445] $LOCALIZE[535]">biglist</viewtype>
 				<posx>658</posx>
 				<posy>60</posy>
-				<height>455</height>
+				<height>415</height>
 				<width>600</width>
 				<onup>509</onup>
 				<ondown>509</ondown>
@@ -197,11 +197,11 @@
 				<!-- Title -->
 				<control type="label">
 					<posx>35</posx>
-					<posy>430</posy>
+					<posy>420</posy>
 					<width>600</width>
 					<height>30</height>
-					<align>center</align>
-					<aligny>center</aligny>
+					<align>left</align>
+					<aligny>left</aligny>
 					<font>METF_TitleTextLarge</font>
 					<textcolor>TitleText</textcolor>
 					<label>$INFO[ListItem.Label]</label>
@@ -212,8 +212,8 @@
 					<posy>459</posy>
 					<width>600</width>
 					<height>30</height>
-					<align>center</align>
-					<aligny>center</aligny>
+					<align>left</align>
+					<aligny>left</aligny>
 					<font>METF_MediaDetailsSmall</font>
 					<textcolor>MediaDetailsGenre</textcolor>
 					<label>$INFO[ListItem.Genre]</label>
@@ -225,8 +225,8 @@
 					<posy>459</posy>
 					<width>600</width>
 					<height>30</height>
-					<align>center</align>
-					<aligny>center</aligny>
+					<align>left</align>
+					<aligny>left</aligny>
 					<font>METF_MediaDetailsSmall</font>
 					<textcolor>MediaDetailsGenre</textcolor>
 					<label>$LOCALIZE[20416] $INFO[ListItem.Date]</label>
@@ -238,8 +238,8 @@
 					<posy>459</posy>
 					<width>600</width>
 					<height>30</height>
-					<align>center</align>
-					<aligny>center</aligny>
+					<align>left</align>
+					<aligny>left</aligny>
 					<font>METF_MediaDetailsSmall</font>
 					<textcolor>MediaDetailsGenre</textcolor>
 					<label>$INFO[ListItem.PictureDateTime]</label>
@@ -251,8 +251,8 @@
 					<posy>459</posy>
 					<width>600</width>
 					<height>30</height>
-					<align>center</align>
-					<aligny>center</aligny>
+					<align>left</align>
+					<aligny>left</aligny>
 					<font>METF_MediaDetailsSmall</font>
 					<textcolor>MediaDetailsGenre</textcolor>
 					<label>$LOCALIZE[31313]</label>
@@ -262,10 +262,10 @@
 			<!-- Info Details -->
 			<control type="grouplist">
 				<posx>35</posx>
-				<posy>487</posy>
+				<posy>450</posy>
 				<width>600</width>
-				<height>30</height>
-				<align>center</align>
+				<height>60</height>
+				<align>right</align>
 				<itemgap>10</itemgap>
 				<orientation>horizontal</orientation>
 				<include>Animation_OpenCloseFade</include>
@@ -277,7 +277,7 @@
 				<control type="label">
 					<width min="25" max="1200">auto</width>
 					<height>30</height>
-					<aligny>center</aligny>
+					<aligny>right</aligny>
 					<font>METF_MediaDetailsSmall</font>
 					<textcolor>MediaDetailsYear</textcolor>
 					<label>$INFO[ListItem.Year]</label>
@@ -288,7 +288,7 @@
 					<width>8</width>
 					<height>32</height>
 					<texture>Dot.png</texture>
-					<aspectratio align="center" aligny="center">keep</aspectratio>
+					<aspectratio align="right" aligny="right">keep</aspectratio>
 					<colordiffuse>BulletDiffuse</colordiffuse>
 					<visible>![IsEmpty(ListItem.Year) | IsEmpty(ListItem.Duration)] + ![Container.Content(episodes) | Container.Content(seasons)]</visible>
 				</control>
@@ -296,7 +296,7 @@
 				<control type="label">
 					<width min="25" max="1200">auto</width>
 					<height>30</height>
-					<aligny>center</aligny>
+					<aligny>right</aligny>
 					<font>METF_MediaDetailsSmall</font>
 					<textcolor>MediaDetailsDuration</textcolor>
 					<label>$INFO[ListItem.Duration,, [LOWERCASE]$LOCALIZE[31299][/LOWERCASE]]</label>
@@ -305,7 +305,7 @@
 				<control type="label">
 					<width min="25" max="1200">auto</width>
 					<height>30</height>
-					<aligny>center</aligny>
+					<aligny>right</aligny>
 					<font>METF_MediaDetailsSmall</font>
 					<textcolor>MediaDetailsDuration</textcolor>
 					<label>$INFO[ListItem.Duration]</label>
@@ -316,7 +316,7 @@
 					<width>8</width>
 					<height>32</height>
 					<texture>Dot.png</texture>
-					<aspectratio align="center" aligny="center">keep</aspectratio>
+					<aspectratio align="right" aligny="right">keep</aspectratio>
 					<colordiffuse>BulletDiffuse</colordiffuse>
 					<visible>![IsEmpty(ListItem.Duration) | IsEmpty(ListItem.Property(TotalEpisodes))] + ![Container.Content(tvshows) | Container.Content(seasons)]</visible>
 				</control>
@@ -324,7 +324,7 @@
 				<control type="label">
 					<width min="25" max="1200">auto</width>
 					<height>30</height>
-					<aligny>center</aligny>
+					<aligny>right</aligny>
 					<font>METF_MediaDetailsSmall</font>
 					<textcolor>MediaDetailsEpisodes</textcolor>
 					<label>$INFO[ListItem.Property(TotalEpisodes)] $LOCALIZE[20360]</label>
@@ -335,7 +335,7 @@
 					<width>8</width>
 					<height>32</height>
 					<texture>Dot.png</texture>
-					<aspectratio align="center" aligny="center">keep</aspectratio>
+					<aspectratio align="right" aligny="right">keep</aspectratio>
 					<colordiffuse>BulletDiffuse</colordiffuse>
 					<visible>!IsEmpty(ListItem.Property(TotalEpisodes)) + [Container.Content(seasons) | Container.Content(tvshows)]</visible>
 				</control>
@@ -343,7 +343,7 @@
 				<control type="label">
 					<width min="25" max="1200">auto</width>
 					<height>30</height>
-					<aligny>center</aligny>
+					<aligny>right</aligny>
 					<font>METF_MediaDetailsSmall</font>
 					<textcolor>MediaDetailsEpisodes</textcolor>
 					<label>$INFO[ListItem.Property(UnWatchedEpisodes)] $LOCALIZE[16101]</label>
@@ -353,7 +353,7 @@
 			<!-- Picture Info -->
 			<control type="grouplist">
 				<posx>35</posx>
-				<posy>487</posy>
+				<posy>447</posy>
 				<width>600</width>
 				<height>30</height>
 				<align>center</align>

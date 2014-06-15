@@ -423,14 +423,14 @@
 	</include>
 	<include name="PlotBox">
 		<posx>300</posx>
-		<posy>565</posy>
+		<posy>525</posy>
 		<control type="textbox">
 			<include>Animation_FadedByMenu</include>
 			<include>Animation_OpenCloseFade</include>
 			<include>Animation_HiddenByInfo</include>
 			<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
 			<width>750</width>
-			<height>66</height>
+			<height>106</height>
 			<font>METF_PlotTextSmall</font>
 			<include condition="!Skin.HasSetting(AutoScrollFast)">AutoScrollShort</include>
 			<include condition="Skin.HasSetting(AutoScrollFast)">AutoScrollShortFast</include>
@@ -448,7 +448,7 @@
 			<height>135</height>
 			<font>METF_PlotTextMedium</font>
 			-->
-			<height>128</height>
+			<height>168</height>
 			<font>METF_PlotTextSmall</font>
 			<include condition="!Skin.HasSetting(AutoScrollFast)">AutoScrollLong</include>
 			<include condition="Skin.HasSetting(AutoScrollFast)">AutoScrollLongFast</include>
@@ -495,23 +495,23 @@
 	<include name="LiveTVPlot">
 		<!-- Plot (Bottom) -->
 		<control type="group">
-			<posx>30</posx>
-			<posy>560</posy>
+			<posx>20</posx>
+			<posy>520</posy>
 			<visible>Control.IsVisible(10) | Control.IsVisible(11) | Control.IsVisible(13) | Control.IsVisible(15) | Control.IsVisible(16) | Control.IsVisible(17)</visible>
 			<control type="image">
 				<description>TV Channel Icon</description>
 				<posx>0</posx>
-				<posy>0</posy>
-				<width>100</width>
-				<height>100</height>
-				<aspectratio aligny="bottom">keep</aspectratio>
+				<posy>20</posy>
+				<width>160</width>
+				<height>160</height>
+				<aspectratio aligny="top">keep</aspectratio>
 				<info>ListItem.Icon</info>
 			</control>
 			<control type="label">
 				<description>TV Channel Title</description>
-				<posx>120</posx>
+				<posx>160</posx>
 				<posy>0</posy>
-				<width>620</width>
+				<width>540</width>
 				<height>30</height>
 				<scroll>true</scroll>
 				<align>false</align>
@@ -522,9 +522,9 @@
 			</control>
 			<control type="label">
 				<description>TV Channel Timing</description>
-				<posx>1040</posx>
+				<posx>1060</posx>
 				<posy>0</posy>
-				<width>430</width>
+				<width>450</width>
 				<height>30</height>
 				<label>$INFO[ListItem.StartTime,(,]$INFO[ListItem.EndTime, - ,]$INFO[ListItem.Duration, / ,])</label>
 				<align>right</align>
@@ -534,10 +534,10 @@
 			</control>
 			<control type="textbox">
 				<description>TV Channel Plot</description>
-				<posx>140</posx>
+				<posx>180</posx>
 				<posy>40</posy>
-				<width>880</width>
-				<height>110</height>
+				<width>860</width>
+				<height>150</height>
 				<align>justify</align>
 				<font>METF_PlotTextMedium</font>
 				<textcolor>TextNF</textcolor>
