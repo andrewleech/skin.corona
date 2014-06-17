@@ -337,5 +337,10 @@
 			<filename>MET_UbuntuRegular.ttf</filename>
 			<size>27</size>
 		</font>
+		<font>
+			<name>METF_PVREpgTimeline</name>
+			<filename>MET_UbuntuRegular.ttf</filename>
+			<size>25</size>
+		</font>
 	</fontset>
 </fonts>

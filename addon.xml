@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon 
-	id="skin.metropolis"
+	id="skin.corona"
 	version="2.8.0"
-	name="Metropolis"
-	provider-name="Amra, Stoli, jingai">
+	name="Corona"
+	provider-name="Amra, Stoli, jingai, corona">
 	<requires>
 		<import addon="xbmc.gui" version="5.0.1"/>
 		<import addon="service.skin.widgets" version="0.0.13"/>
