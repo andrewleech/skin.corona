@@ -288,7 +288,7 @@
 		<control type="group">
 			<posx>12</posx>
 			<posy>40</posy>
-			<visible>Weather.IsFetched + [[!Window.IsActive(visualisation) + !Skin.HasSetting(HideClockTemp)] | [Window.IsActive(visualisation) + Player.ShowInfo + !Skin.HasSetting(HideVisClock) + !Window.IsVisible(120)]]</visible>
+			<visible>Weather.IsFetched + [[!Window.IsActive(visualisation) + !Skin.HasSetting(HideClockTemp)] | [Window.IsActive(visualisation) + Player.ShowInfo + !Skin.HasSetting(HideVisClock) + !Window.IsVisible(120)]] + !Window.IsVisible(601)<!--MyPVR--></visible>
 			<control type="image">
 				<posx>1145</posx>
 				<posy>517</posy>
