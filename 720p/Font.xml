@@ -15,19 +15,24 @@
 		<font>
 			<name>METF_HomeMenu</name>
 			<filename>MET_FontinSansSmallCaps.ttf</filename>
-			<size>35</size>
+			<size>55</size>
 		</font>
 		<font>
 			<name>METF_HomeMenuSmall</name>
 			<filename>MET_FontinSansSmallCaps.ttf</filename>
-			<size>31</size>
+			<size>36</size>
 		</font>
 		<font>
+			<name>METF_RecentlyAddedTitle</name>
+			<filename>MET_BoldCaps.ttf</filename>
+			<size>30</size>
+		</font>
+<!-- 		<font>
 			<name>METF_RecentlyAddedTitle</name>
 			<filename>MET_FontinSansSmallCaps.ttf</filename>
 			<size>32</size>
 		</font>
-		<font>
+ -->		<font>
 			<name>METF_RecentlyAddedListText</name>
 			<filename>MET_UbuntuRegular.ttf</filename>
 			<size>28</size>
@@ -46,7 +51,7 @@
 		<font>
 			<name>METF_HelpText</name>
 			<filename>MET_BoldCaps.ttf</filename>
-			<size>28</size>
+			<size>30</size>
 		</font>
 		<font>
 			<name>METF_Temp</name>

@@ -227,7 +227,7 @@
 		<value>$INFO[Window(Weather).Property(Weekend.2.FanartCode),special://skin/extras/weather_icons/,.png]</value>
 	</variable>
 	<constant name="WeatherHomeLeft">325</constant>
-	<constant name="WeatherHomeTop">555</constant>
+	<constant name="WeatherHomeTop">480</constant>
 	<constant name="WeatherHomeHeight">160</constant>
 	<constant name="WeatherHomeWidth">150</constant>
 	<constant name="WeatherPanelLeft">210</constant>

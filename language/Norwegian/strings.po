@@ -154,7 +154,7 @@ msgstr "Ferdig"
 
 msgctxt "#31601"
 msgid "Live TV"
-msgstr "Live TV"
+msgstr "Local TV"
 
 msgctxt "#31605"
 msgid "Add Group"

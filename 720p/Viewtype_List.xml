@@ -642,10 +642,10 @@
 				</control>
 			</control>
 			<!-- Scroll Bar -->
-			<control type="scrollbar" id="998">
+<!-- 			<control type="scrollbar" id="998">
 				<include>Animation_OpenCloseFade</include>
 				<include>Animation_FadedByMenu</include>
-				<posx>1270</posx>
+				<posx>1250</posx>
 				<posy>88</posy>
 				<width>22</width>
 				<height>376</height>
@@ -658,7 +658,7 @@
 				<showonepage>true</showonepage>
 				<orientation>vertical</orientation>
 				<animation effect="fade" start="0" end="100" time="400" condition="Control.HasFocus(998) | Container.Scrolling">Conditional</animation>
-			</control>
+			</control> -->
 		</control>
 	</include>
 </includes>
