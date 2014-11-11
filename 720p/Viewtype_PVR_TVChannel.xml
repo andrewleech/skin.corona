@@ -14,8 +14,10 @@
   					<posy>0</posy>
   					<width>640</width>
   					<height>450</height>
-  					<onleft>32</onleft>
-	  				<onright>70</onright>
+  					<!-- <onleft>32</onleft>
+	  				<onright>70</onright> -->
+			        <onright>select</onright>
+			        <onleft>XBMC.Action(ParentDir)</onleft>
 					<pagecontrol>70</pagecontrol>
 					<scrolltime>200</scrolltime>
 					<itemlayout height="60" width="700">

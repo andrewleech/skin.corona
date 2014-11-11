@@ -47,8 +47,10 @@
 					<height>414</height>
 					<onup>14</onup>
 					<ondown>14</ondown>
-					<onleft>35</onleft>
-					<onright>73</onright>
+					<<!-- onleft>35</onleft>
+					<onright>73</onright> -->
+			        <onright>select</onright>
+			        <onleft>XBMC.Action(ParentDir)</onleft>
 					<pagecontrol>73</pagecontrol>
 					<scrolltime>200</scrolltime>
 					<itemlayout height="40">

@@ -10,8 +10,10 @@
 				<posy>50</posy>
 				<width>1200</width>
 				<height>434</height>
-				<onleft>34</onleft>
-				<onright>72</onright>
+				<!-- <onleft>34</onleft>
+				<onright>72</onright> -->
+		        <onright>select</onright>
+		        <onleft>XBMC.Action(ParentDir)</onleft>
 				<!-- <onup>13</onup>
 				<ondown>13</ondown> -->
 				<pagecontrol>72</pagecontrol>
