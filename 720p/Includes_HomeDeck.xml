@@ -2,7 +2,7 @@
 <includes>
 	<visible>true</visible>
 	<!-- Submenu title for all home views -->
-	<!-- <include name="RecentlyAddedArrow1">
+	<include name="RecentlyAddedArrow1">
 		<posx>238</posx>
 		<posy>510</posy>
 		<width>30</width>
@@ -25,7 +25,7 @@
 		<height>30</height>
 		<texture>ArrowUp.png</texture>
 		<colordiffuse>HelpArrowDiffuse</colordiffuse>
-	</include> -->
+	</include>
 	<include name="RecentlyAddedTitle1">
 		<posx>70</posx>
 		<posy>40</posy>
@@ -60,7 +60,7 @@
 	<!-- Main menu shared artwork -->
 	<include name="HomePlayDiscIcon">
 		<description>PlayDisc</description>
-		<label>$LOCALIZE[[341]</label>
+		<label>$LOCALIZE[341]</label>
 		<icon>home_icons/playdisc.png</icon>
 		<thumb>$INFO[Skin.String(CustomPlayDisc)]</thumb>
 	</include>
@@ -265,6 +265,50 @@
 		<thumb>$INFO[Skin.String(CustomShutdown)]</thumb>
 	</include>
 
+	<include name="HomeCustom1Icon">
+		<description>Custom1</description>
+		<label>$INFO[Skin.String(DialogHome1Title)]</label>
+		<icon>$INFO[Skin.String(DialogHome1image)]</icon>
+	</include>
+	<include name="HomeCustom1Wallpaper">
+		<description>Custom1</description>
+		<label>$INFO[Skin.String(DialogHome1Title)]</label>
+		<icon>$INFO[Skin.String(DialogHome1wallpaper)]</icon>
+	</include>
+
+	<include name="HomeCustom2Icon">
+		<description>Custom2</description>
+		<label>$INFO[Skin.String(DialogHome2Title)]</label>
+		<icon>$INFO[Skin.String(DialogHome2image)]</icon>
+	</include>
+	<include name="HomeCustom2Wallpaper">
+		<description>Custom2</description>
+		<label>$INFO[Skin.String(DialogHome2Title)]</label>
+		<icon>$INFO[Skin.String(DialogHome2wallpaper)]</icon>
+	</include>
+
+	<include name="HomeCustom3Icon">
+		<description>Custom3</description>
+		<label>$INFO[Skin.String(DialogHome3Title)]</label>
+		<icon>$INFO[Skin.String(DialogHome3image)]</icon>
+	</include>
+	<include name="HomeCustom3Wallpaper">
+		<description>Custom3</description>
+		<label>$INFO[Skin.String(DialogHome3Title)]</label>
+		<icon>$INFO[Skin.String(DialogHome3wallpaper)]</icon>
+	</include>
+
+	<include name="HomeCustom4Icon">
+		<description>Custom4</description>
+		<label>$INFO[Skin.String(DialogHome4Title)]</label>
+		<icon>$INFO[Skin.String(DialogHome4image)]</icon>
+	</include>
+	<include name="HomeCustom4Wallpaper">
+		<description>Custom4</description>
+		<label>$INFO[Skin.String(DialogHome4Title)]</label>
+		<icon>$INFO[Skin.String(DialogHome4wallpaper)]</icon>
+	</include>
+
 	<!-- Main menu shared content list -->
 	<include name="HomeListContent">
 		<content>
@@ -273,7 +317,7 @@
 				<include condition="Skin.HasSetting(Home2)">HomePlayDiscIcon</include>
 				<include condition="!Skin.HasSetting(Home2)">HomePlayDiscWallpaper</include>
 				<onclick>PlayDVD</onclick>
-				<visible>System.HasMediadvd</visible>
+				<visible>System.HasMediaDVD + !Skin.HasSetting(NoPlayDisc)</visible>
 			</item>
 			<item id="2">
 				<description>Movies (Empty library)</description>
@@ -468,8 +512,8 @@
 				<description>Live TV</description>
 				<include condition="Skin.HasSetting(Home2)">HomeLiveTVIcon</include>
 				<include condition="!Skin.HasSetting(Home2)">HomeLiveTVWallpaper</include>
-				<onclick>ActivateWindow(PVR)</onclick>
-				<visible>System.GetBool(pvrmanager.enabled)</visible>
+				<onclick>ActivateWindow(TVChannels)</onclick>
+				<visible>System.GetBool(pvrmanager.enabled) + !Skin.HasSetting(NoLiveTV)</visible>
 			</item>
 			<item id="7">
 				<description>Music</description>
@@ -662,7 +706,7 @@
 			<item id="12">
 				<description>Weather</description>
 				<include condition="!Skin.HasSetting(Home2)">HomeWeatherWallpaper</include>
-				<thumb>special://skin/extras/weather/$INFO[Window(Weather).Property(Current.FanartCode)]/weather-$INFO[Window(Weather).Property(Current.FanartCode)].jpg</thumb>
+				<thumb>special://skin/extras/weather/weather-$INFO[Window(Weather).Property(Current.FanartCode)].jpg</thumb>
 				<onclick>ActivateWindow(Weather)</onclick>
 				<visible>!Skin.HasSetting(NoWeather) + Skin.HasSetting(DynamicWeather) + !Skin.HasSetting(Home2)</visible>
 			</item>
@@ -702,6 +746,34 @@
 				<onclick>XBMC.Quit()</onclick>
 				<visible>!Skin.HasSetting(NoShutdown)</visible>
 				<visible>Skin.HasSetting(NoShutdownDestructive)</visible>
+			</item>
+			<item id="17">
+				<description>Custom1</description>
+				<include condition="Skin.HasSetting(Home2)">HomeCustom1Icon</include>
+				<include condition="!Skin.HasSetting(Home2)">HomeCustom1Wallpaper</include>
+				<onclick>$INFO[Skin.String(DialogHome1.path)]</onclick>
+				<visible>Skin.HasSetting(DialogHome1Enable)</visible>
+			</item>
+			<item id="18">
+				<description>Custom2</description>
+				<include condition="Skin.HasSetting(Home2)">HomeCustom2Icon</include>
+				<include condition="!Skin.HasSetting(Home2)">HomeCustom2Wallpaper</include>
+				<onclick>$INFO[Skin.String(DialogHome2.path)]</onclick>
+				<visible>Skin.HasSetting(DialogHome2Enable)</visible>
+			</item>
+			<item id="19">
+				<description>Custom3</description>
+				<include condition="Skin.HasSetting(Home2)">HomeCustom3Icon</include>
+				<include condition="!Skin.HasSetting(Home2)">HomeCustom3Wallpaper</include>
+				<onclick>$INFO[Skin.String(DialogHome3.path)]</onclick>
+				<visible>Skin.HasSetting(DialogHome3Enable)</visible>
+			</item>
+			<item id="20">
+				<description>Custom4</description>
+				<include condition="Skin.HasSetting(Home2)">HomeCustom4Icon</include>
+				<include condition="!Skin.HasSetting(Home2)">HomeCustom4Wallpaper</include>
+				<onclick>$INFO[Skin.String(DialogHome4.path)]</onclick>
+				<visible>Skin.HasSetting(DialogHome4Enable)</visible>
 			</item>
 		</content>
 	</include>
@@ -1238,37 +1310,43 @@
 				<include condition="![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)]">Submenu_Button1</include>
 				<include condition="Skin.HasSetting(Home2)">Submenu_Button2</include>
 				<include condition="Skin.HasSetting(Home3)">Submenu_Button3</include>
-				<label>$LOCALIZE[19023]</label>
-				<onclick>ActivateWindow(PVR)</onclick>
-				<onclick>Setfocus(32)</onclick>
-				<onclick>Setfocus(11)</onclick>
+				<label>$LOCALIZE[19019]</label>
+				<onclick>ActivateWindow(TVChannels)</onclick>
 			</control>
 			<control type="button" id="92002">
 				<include condition="![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)]">Submenu_Button1</include>
 				<include condition="Skin.HasSetting(Home2)">Submenu_Button2</include>
 				<include condition="Skin.HasSetting(Home3)">Submenu_Button3</include>
-				<label>$LOCALIZE[19069]</label>
-				<onclick>ActivateWindow(PVR)</onclick>
-				<onclick>Setfocus(31)</onclick>
-				<onclick>Setfocus(10)</onclick>
+				<label>$LOCALIZE[19024]</label>
+				<onclick>ActivateWindow(RadioChannels)</onclick>
 			</control>
 			<control type="button" id="92003">
 				<include condition="![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)]">Submenu_Button1</include>
 				<include condition="Skin.HasSetting(Home2)">Submenu_Button2</include>
 				<include condition="Skin.HasSetting(Home3)">Submenu_Button3</include>
-				<label>$LOCALIZE[19163]</label>
-				<onclick>ActivateWindow(PVR)</onclick>
-				<onclick>Setfocus(34)</onclick>
-				<onclick>Setfocus(13)</onclick>
+				<label>$LOCALIZE[22020]</label>
+				<onclick>ActivateWindow(TVGuide)</onclick>
 			</control>
 			<control type="button" id="92004">
 				<include condition="![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)]">Submenu_Button1</include>
 				<include condition="Skin.HasSetting(Home2)">Submenu_Button2</include>
 				<include condition="Skin.HasSetting(Home3)">Submenu_Button3</include>
+				<label>$LOCALIZE[19163]</label>
+				<onclick>ActivateWindow(TVRecordings)</onclick>
+			</control>
+			<control type="button" id="92005">
+				<include condition="![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)]">Submenu_Button1</include>
+				<include condition="Skin.HasSetting(Home2)">Submenu_Button2</include>
+				<include condition="Skin.HasSetting(Home3)">Submenu_Button3</include>
 				<label>$LOCALIZE[19040]</label>
-				<onclick>ActivateWindow(PVR)</onclick>
-				<onclick>Setfocus(35)</onclick>
-				<onclick>Setfocus(14)</onclick>
+				<onclick>ActivateWindow(TVTimers)</onclick>
+			</control>
+			<control type="button" id="92006">
+				<include condition="![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)]">Submenu_Button1</include>
+				<include condition="Skin.HasSetting(Home2)">Submenu_Button2</include>
+				<include condition="Skin.HasSetting(Home3)">Submenu_Button3</include>
+				<label>$LOCALIZE[137]</label>
+				<onclick>ActivateWindow(TVSearch)</onclick>
 			</control>
 		</control>
 		<!-- Music Submenu -->
@@ -1452,7 +1530,6 @@
 				<include condition="Skin.HasSetting(Home3)">Submenu_Button3</include>
 				<label>$LOCALIZE[31289]</label>
 				<onclick>ActivateWindow(MusicFiles)</onclick>
-				<visible>Skin.HasSetting(HomeMusic_Override)</visible>
 				<visible>Container(9000).HasFocus(7) + !Skin.HasSetting(NoMusicSubs)</visible>
 			</control>
 			<control type="button" id="91722">
@@ -1772,11 +1849,27 @@
 				<include condition="![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)]">Submenu_Button1</include>
 				<include condition="Skin.HasSetting(Home2)">Submenu_Button2</include>
 				<include condition="Skin.HasSetting(Home3)">Submenu_Button3</include>
+				<label>$INFO[Skin.String(HomeGames_Favourite1_Label)]</label>
+				<onclick>$INFO[Skin.String(HomeGames_Favourite1_Path)]</onclick>
+				<visible>Skin.HasSetting(HomeGames_Shortcuts) + !IsEmpty(Skin.String(HomeGames_Favourite1_Path))</visible>
+			</control>
+			<control type="button" id="92302">
+				<include condition="![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)]">Submenu_Button1</include>
+				<include condition="Skin.HasSetting(Home2)">Submenu_Button2</include>
+				<include condition="Skin.HasSetting(Home3)">Submenu_Button3</include>
 				<label>$INFO[System.AddonTitle(Skin.String(HomeGames_Addon1))]</label>
 				<onclick>RunAddon($INFO[Skin.String(HomeGames_Addon1)])</onclick>
 				<visible>Skin.HasSetting(HomeGames_Shortcuts) + !IsEmpty(Skin.String(HomeGames_Addon1))</visible>
 			</control>
-			<control type="button" id="92302">
+			<control type="button" id="92303">
+				<include condition="![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)]">Submenu_Button1</include>
+				<include condition="Skin.HasSetting(Home2)">Submenu_Button2</include>
+				<include condition="Skin.HasSetting(Home3)">Submenu_Button3</include>
+				<label>$INFO[Skin.String(HomeGames_Favourite2_Label)]</label>
+				<onclick>$INFO[Skin.String(HomeGames_Favourite2_Path)]</onclick>
+				<visible>Skin.HasSetting(HomeGames_Shortcuts) + !IsEmpty(Skin.String(HomeGames_Favourite2_Path))</visible>
+			</control>
+			<control type="button" id="92304">
 				<include condition="![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)]">Submenu_Button1</include>
 				<include condition="Skin.HasSetting(Home2)">Submenu_Button2</include>
 				<include condition="Skin.HasSetting(Home3)">Submenu_Button3</include>
@@ -1784,7 +1877,15 @@
 				<onclick>RunAddon($INFO[Skin.String(HomeGames_Addon2)])</onclick>
 				<visible>Skin.HasSetting(HomeGames_Shortcuts) + !IsEmpty(Skin.String(HomeGames_Addon2))</visible>
 			</control>
-			<control type="button" id="92303">
+			<control type="button" id="92305">
+				<include condition="![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)]">Submenu_Button1</include>
+				<include condition="Skin.HasSetting(Home2)">Submenu_Button2</include>
+				<include condition="Skin.HasSetting(Home3)">Submenu_Button3</include>
+				<label>$INFO[Skin.String(HomeGames_Favourite3_Label)]</label>
+				<onclick>$INFO[Skin.String(HomeGames_Favourite3_Path)]</onclick>
+				<visible>Skin.HasSetting(HomeGames_Shortcuts) + !IsEmpty(Skin.String(HomeGames_Favourite3_Path))</visible>
+			</control>
+			<control type="button" id="92306">
 				<include condition="![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)]">Submenu_Button1</include>
 				<include condition="Skin.HasSetting(Home2)">Submenu_Button2</include>
 				<include condition="Skin.HasSetting(Home3)">Submenu_Button3</include>
@@ -1792,7 +1893,15 @@
 				<onclick>RunAddon($INFO[Skin.String(HomeGames_Addon3)])</onclick>
 				<visible>Skin.HasSetting(HomeGames_Shortcuts) + !IsEmpty(Skin.String(HomeGames_Addon3))</visible>
 			</control>
-			<control type="button" id="92304">
+			<control type="button" id="92307">
+				<include condition="![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)]">Submenu_Button1</include>
+				<include condition="Skin.HasSetting(Home2)">Submenu_Button2</include>
+				<include condition="Skin.HasSetting(Home3)">Submenu_Button3</include>
+				<label>$INFO[Skin.String(HomeGames_Favourite4_Label)]</label>
+				<onclick>$INFO[Skin.String(HomeGames_Favourite4_Path)]</onclick>
+				<visible>Skin.HasSetting(HomeGames_Shortcuts) + !IsEmpty(Skin.String(HomeGames_Favourite4_Path))</visible>
+			</control>
+			<control type="button" id="92308">
 				<include condition="![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)]">Submenu_Button1</include>
 				<include condition="Skin.HasSetting(Home2)">Submenu_Button2</include>
 				<include condition="Skin.HasSetting(Home3)">Submenu_Button3</include>
@@ -1800,7 +1909,15 @@
 				<onclick>RunAddon($INFO[Skin.String(HomeGames_Addon4)])</onclick>
 				<visible>Skin.HasSetting(HomeGames_Shortcuts) + !IsEmpty(Skin.String(HomeGames_Addon4))</visible>
 			</control>
-			<control type="button" id="92305">
+			<control type="button" id="92309">
+				<include condition="![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)]">Submenu_Button1</include>
+				<include condition="Skin.HasSetting(Home2)">Submenu_Button2</include>
+				<include condition="Skin.HasSetting(Home3)">Submenu_Button3</include>
+				<label>$INFO[Skin.String(HomeGames_Favourite5_Label)]</label>
+				<onclick>$INFO[Skin.String(HomeGames_Favourite5_Path)]</onclick>
+				<visible>Skin.HasSetting(HomeGames_Shortcuts) + !IsEmpty(Skin.String(HomeGames_Favourite5_Path))</visible>
+			</control>
+			<control type="button" id="92310">
 				<include condition="![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)]">Submenu_Button1</include>
 				<include condition="Skin.HasSetting(Home2)">Submenu_Button2</include>
 				<include condition="Skin.HasSetting(Home3)">Submenu_Button3</include>
@@ -2092,6 +2209,358 @@
 				<onclick>XBMC.Quit()</onclick>
 			</control>
 		</control>
+		<!--Custom 1 Submenu -->
+		<control type="grouplist" id="9024">
+			<include condition="![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)]">Submenu_VerticalDetails1</include>
+			<include condition="Skin.HasSetting(Home2)">Submenu_VerticalDetails2</include>
+			<include condition="Skin.HasSetting(Home3)">Submenu_VerticalDetails3</include>
+			<onup>9024</onup>
+			<ondown>9024</ondown>
+			<visible>Container(9000).HasFocus(17)</visible>
+			<control type="button" id="92401">
+				<include condition="![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)]">Submenu_Button1</include>
+				<include condition="Skin.HasSetting(Home2)">Submenu_Button2</include>
+				<include condition="Skin.HasSetting(Home3)">Submenu_Button3</include>
+				<label>$INFO[Skin.String(HomeCustom1_Favourite1_Label)]</label>
+				<onclick>$INFO[Skin.String(HomeCustom1_Favourite1_Path)]</onclick>
+				<visible>Skin.HasSetting(HomeCustom1_Shortcuts) + !IsEmpty(Skin.String(HomeCustom1_Favourite1_Path))</visible>
+			</control>
+			<control type="button" id="92402">
+				<include condition="![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)]">Submenu_Button1</include>
+				<include condition="Skin.HasSetting(Home2)">Submenu_Button2</include>
+				<include condition="Skin.HasSetting(Home3)">Submenu_Button3</include>
+				<label>$INFO[System.AddonTitle(Skin.String(HomeCustom1_Addon1))]</label>
+				<onclick>RunAddon($INFO[Skin.String(HomeCustom1_Addon1)])</onclick>
+				<visible>Skin.HasSetting(HomeCustom1_Shortcuts) + !IsEmpty(Skin.String(HomeCustom1_Addon1))</visible>
+			</control>
+			<control type="button" id="92403">
+				<include condition="![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)]">Submenu_Button1</include>
+				<include condition="Skin.HasSetting(Home2)">Submenu_Button2</include>
+				<include condition="Skin.HasSetting(Home3)">Submenu_Button3</include>
+				<label>$INFO[Skin.String(HomeCustom1_Favourite2_Label)]</label>
+				<onclick>$INFO[Skin.String(HomeCustom1_Favourite2_Path)]</onclick>
+				<visible>Skin.HasSetting(HomeCustom1_Shortcuts) + !IsEmpty(Skin.String(HomeCustom1_Favourite2_Path))</visible>
+			</control>
+			<control type="button" id="92404">
+				<include condition="![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)]">Submenu_Button1</include>
+				<include condition="Skin.HasSetting(Home2)">Submenu_Button2</include>
+				<include condition="Skin.HasSetting(Home3)">Submenu_Button3</include>
+				<label>$INFO[System.AddonTitle(Skin.String(HomeCustom1_Addon2))]</label>
+				<onclick>RunAddon($INFO[Skin.String(HomeCustom1_Addon2)])</onclick>
+				<visible>Skin.HasSetting(HomeCustom1_Shortcuts) + !IsEmpty(Skin.String(HomeCustom1_Addon2))</visible>
+			</control>
+			<control type="button" id="92405">
+				<include condition="![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)]">Submenu_Button1</include>
+				<include condition="Skin.HasSetting(Home2)">Submenu_Button2</include>
+				<include condition="Skin.HasSetting(Home3)">Submenu_Button3</include>
+				<label>$INFO[Skin.String(HomeCustom1_Favourite3_Label)]</label>
+				<onclick>$INFO[Skin.String(HomeCustom1_Favourite3_Path)]</onclick>
+				<visible>Skin.HasSetting(HomeCustom1_Shortcuts) + !IsEmpty(Skin.String(HomeCustom1_Favourite3_Path))</visible>
+			</control>
+			<control type="button" id="92406">
+				<include condition="![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)]">Submenu_Button1</include>
+				<include condition="Skin.HasSetting(Home2)">Submenu_Button2</include>
+				<include condition="Skin.HasSetting(Home3)">Submenu_Button3</include>
+				<label>$INFO[System.AddonTitle(Skin.String(HomeCustom1_Addon3))]</label>
+				<onclick>RunAddon($INFO[Skin.String(HomeCustom1_Addon3)])</onclick>
+				<visible>Skin.HasSetting(HomeCustom1_Shortcuts) + !IsEmpty(Skin.String(HomeCustom1_Addon3))</visible>
+			</control>
+			<control type="button" id="92407">
+				<include condition="![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)]">Submenu_Button1</include>
+				<include condition="Skin.HasSetting(Home2)">Submenu_Button2</include>
+				<include condition="Skin.HasSetting(Home3)">Submenu_Button3</include>
+				<label>$INFO[Skin.String(HomeCustom1_Favourite4_Label)]</label>
+				<onclick>$INFO[Skin.String(HomeCustom1_Favourite4_Path)]</onclick>
+				<visible>Skin.HasSetting(HomeCustom1_Shortcuts) + !IsEmpty(Skin.String(HomeCustom1_Favourite4_Path))</visible>
+			</control>
+			<control type="button" id="92408">
+				<include condition="![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)]">Submenu_Button1</include>
+				<include condition="Skin.HasSetting(Home2)">Submenu_Button2</include>
+				<include condition="Skin.HasSetting(Home3)">Submenu_Button3</include>
+				<label>$INFO[System.AddonTitle(Skin.String(HomeCustom1_Addon4))]</label>
+				<onclick>RunAddon($INFO[Skin.String(HomeCustom1_Addon4)])</onclick>
+				<visible>Skin.HasSetting(HomeCustom1_Shortcuts) + !IsEmpty(Skin.String(HomeCustom1_Addon4))</visible>
+			</control>
+			<control type="button" id="92409">
+				<include condition="![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)]">Submenu_Button1</include>
+				<include condition="Skin.HasSetting(Home2)">Submenu_Button2</include>
+				<include condition="Skin.HasSetting(Home3)">Submenu_Button3</include>
+				<label>$INFO[Skin.String(HomeCustom1_Favourite5_Label)]</label>
+				<onclick>$INFO[Skin.String(HomeCustom1_Favourite5_Path)]</onclick>
+				<visible>Skin.HasSetting(HomeCustom1_Shortcuts) + !IsEmpty(Skin.String(HomeCustom1_Favourite5_Path))</visible>
+			</control>
+			<control type="button" id="92410">
+				<include condition="![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)]">Submenu_Button1</include>
+				<include condition="Skin.HasSetting(Home2)">Submenu_Button2</include>
+				<include condition="Skin.HasSetting(Home3)">Submenu_Button3</include>
+				<onclick>RunAddon($INFO[Skin.String(HomeCustom1_Addon5)])</onclick>
+				<visible>Skin.HasSetting(HomeCustom1_Shortcuts) + !IsEmpty(Skin.String(HomeCustom1_Addon5))</visible>
+			</control>
+		</control>
+		<!--Custom 2 Submenu -->
+		<control type="grouplist" id="9025">
+			<include condition="![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)]">Submenu_VerticalDetails1</include>
+			<include condition="Skin.HasSetting(Home2)">Submenu_VerticalDetails2</include>
+			<include condition="Skin.HasSetting(Home3)">Submenu_VerticalDetails3</include>
+			<onup>9025</onup>
+			<ondown>9025</ondown>
+			<visible>Container(9000).HasFocus(18)</visible>
+			<control type="button" id="92501">
+				<include condition="![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)]">Submenu_Button1</include>
+				<include condition="Skin.HasSetting(Home2)">Submenu_Button2</include>
+				<include condition="Skin.HasSetting(Home3)">Submenu_Button3</include>
+				<label>$INFO[Skin.String(HomeCustom2_Favourite1_Label)]</label>
+				<onclick>$INFO[Skin.String(HomeCustom2_Favourite1_Path)]</onclick>
+				<visible>Skin.HasSetting(HomeCustom2_Shortcuts) + !IsEmpty(Skin.String(HomeCustom2_Favourite1_Path))</visible>
+			</control>
+			<control type="button" id="92502">
+				<include condition="![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)]">Submenu_Button1</include>
+				<include condition="Skin.HasSetting(Home2)">Submenu_Button2</include>
+				<include condition="Skin.HasSetting(Home3)">Submenu_Button3</include>
+				<label>$INFO[System.AddonTitle(Skin.String(HomeCustom2_Addon1))]</label>
+				<onclick>RunAddon($INFO[Skin.String(HomeCustom2_Addon1)])</onclick>
+				<visible>Skin.HasSetting(HomeCustom2_Shortcuts) + !IsEmpty(Skin.String(HomeCustom2_Addon1))</visible>
+			</control>
+			<control type="button" id="92503">
+				<include condition="![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)]">Submenu_Button1</include>
+				<include condition="Skin.HasSetting(Home2)">Submenu_Button2</include>
+				<include condition="Skin.HasSetting(Home3)">Submenu_Button3</include>
+				<label>$INFO[Skin.String(HomeCustom2_Favourite2_Label)]</label>
+				<onclick>$INFO[Skin.String(HomeCustom2_Favourite2_Path)]</onclick>
+				<visible>Skin.HasSetting(HomeCustom2_Shortcuts) + !IsEmpty(Skin.String(HomeCustom2_Favourite2_Path))</visible>
+			</control>
+			<control type="button" id="92504">
+				<include condition="![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)]">Submenu_Button1</include>
+				<include condition="Skin.HasSetting(Home2)">Submenu_Button2</include>
+				<include condition="Skin.HasSetting(Home3)">Submenu_Button3</include>
+				<label>$INFO[System.AddonTitle(Skin.String(HomeCustom2_Addon2))]</label>
+				<onclick>RunAddon($INFO[Skin.String(HomeCustom2_Addon2)])</onclick>
+				<visible>Skin.HasSetting(HomeCustom2_Shortcuts) + !IsEmpty(Skin.String(HomeCustom2_Addon2))</visible>
+			</control>
+			<control type="button" id="92505">
+				<include condition="![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)]">Submenu_Button1</include>
+				<include condition="Skin.HasSetting(Home2)">Submenu_Button2</include>
+				<include condition="Skin.HasSetting(Home3)">Submenu_Button3</include>
+				<label>$INFO[Skin.String(HomeCustom2_Favourite3_Label)]</label>
+				<onclick>$INFO[Skin.String(HomeCustom2_Favourite3_Path)]</onclick>
+				<visible>Skin.HasSetting(HomeCustom2_Shortcuts) + !IsEmpty(Skin.String(HomeCustom2_Favourite3_Path))</visible>
+			</control>
+			<control type="button" id="92506">
+				<include condition="![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)]">Submenu_Button1</include>
+				<include condition="Skin.HasSetting(Home2)">Submenu_Button2</include>
+				<include condition="Skin.HasSetting(Home3)">Submenu_Button3</include>
+				<label>$INFO[System.AddonTitle(Skin.String(HomeCustom2_Addon3))]</label>
+				<onclick>RunAddon($INFO[Skin.String(HomeCustom2_Addon3)])</onclick>
+				<visible>Skin.HasSetting(HomeCustom2_Shortcuts) + !IsEmpty(Skin.String(HomeCustom2_Addon3))</visible>
+			</control>
+			<control type="button" id="92507">
+				<include condition="![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)]">Submenu_Button1</include>
+				<include condition="Skin.HasSetting(Home2)">Submenu_Button2</include>
+				<include condition="Skin.HasSetting(Home3)">Submenu_Button3</include>
+				<label>$INFO[Skin.String(HomeCustom2_Favourite4_Label)]</label>
+				<onclick>$INFO[Skin.String(HomeCustom2_Favourite4_Path)]</onclick>
+				<visible>Skin.HasSetting(HomeCustom2_Shortcuts) + !IsEmpty(Skin.String(HomeCustom2_Favourite4_Path))</visible>
+			</control>
+			<control type="button" id="92508">
+				<include condition="![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)]">Submenu_Button1</include>
+				<include condition="Skin.HasSetting(Home2)">Submenu_Button2</include>
+				<include condition="Skin.HasSetting(Home3)">Submenu_Button3</include>
+				<label>$INFO[System.AddonTitle(Skin.String(HomeCustom2_Addon4))]</label>
+				<onclick>RunAddon($INFO[Skin.String(HomeCustom2_Addon4)])</onclick>
+				<visible>Skin.HasSetting(HomeCustom2_Shortcuts) + !IsEmpty(Skin.String(HomeCustom2_Addon4))</visible>
+			</control>
+			<control type="button" id="92509">
+				<include condition="![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)]">Submenu_Button1</include>
+				<include condition="Skin.HasSetting(Home2)">Submenu_Button2</include>
+				<include condition="Skin.HasSetting(Home3)">Submenu_Button3</include>
+				<label>$INFO[Skin.String(HomeCustom2_Favourite5_Label)]</label>
+				<onclick>$INFO[Skin.String(HomeCustom2_Favourite5_Path)]</onclick>
+				<visible>Skin.HasSetting(HomeCustom2_Shortcuts) + !IsEmpty(Skin.String(HomeCustom2_Favourite5_Path))</visible>
+			</control>
+			<control type="button" id="92510">
+				<include condition="![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)]">Submenu_Button1</include>
+				<include condition="Skin.HasSetting(Home2)">Submenu_Button2</include>
+				<include condition="Skin.HasSetting(Home3)">Submenu_Button3</include>
+				<onclick>RunAddon($INFO[Skin.String(HomeCustom2_Addon5)])</onclick>
+				<visible>Skin.HasSetting(HomeCustom2_Shortcuts) + !IsEmpty(Skin.String(HomeCustom2_Addon5))</visible>
+			</control>
+		</control>
+		<!--Custom 3 Submenu -->
+		<control type="grouplist" id="9026">
+			<include condition="![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)]">Submenu_VerticalDetails1</include>
+			<include condition="Skin.HasSetting(Home2)">Submenu_VerticalDetails2</include>
+			<include condition="Skin.HasSetting(Home3)">Submenu_VerticalDetails3</include>
+			<onup>9026</onup>
+			<ondown>9026</ondown>
+			<visible>Container(9000).HasFocus(19)</visible>
+			<control type="button" id="92601">
+				<include condition="![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)]">Submenu_Button1</include>
+				<include condition="Skin.HasSetting(Home2)">Submenu_Button2</include>
+				<include condition="Skin.HasSetting(Home3)">Submenu_Button3</include>
+				<label>$INFO[Skin.String(HomeCustom3_Favourite1_Label)]</label>
+				<onclick>$INFO[Skin.String(HomeCustom3_Favourite1_Path)]</onclick>
+				<visible>Skin.HasSetting(HomeCustom3_Shortcuts) + !IsEmpty(Skin.String(HomeCustom3_Favourite1_Path))</visible>
+			</control>
+			<control type="button" id="92602">
+				<include condition="![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)]">Submenu_Button1</include>
+				<include condition="Skin.HasSetting(Home2)">Submenu_Button2</include>
+				<include condition="Skin.HasSetting(Home3)">Submenu_Button3</include>
+				<label>$INFO[System.AddonTitle(Skin.String(HomeCustom3_Addon1))]</label>
+				<onclick>RunAddon($INFO[Skin.String(HomeCustom3_Addon1)])</onclick>
+				<visible>Skin.HasSetting(HomeCustom3_Shortcuts) + !IsEmpty(Skin.String(HomeCustom3_Addon1))</visible>
+			</control>
+			<control type="button" id="92603">
+				<include condition="![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)]">Submenu_Button1</include>
+				<include condition="Skin.HasSetting(Home2)">Submenu_Button2</include>
+				<include condition="Skin.HasSetting(Home3)">Submenu_Button3</include>
+				<label>$INFO[Skin.String(HomeCustom3_Favourite2_Label)]</label>
+				<onclick>$INFO[Skin.String(HomeCustom3_Favourite2_Path)]</onclick>
+				<visible>Skin.HasSetting(HomeCustom3_Shortcuts) + !IsEmpty(Skin.String(HomeCustom3_Favourite2_Path))</visible>
+			</control>
+			<control type="button" id="92604">
+				<include condition="![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)]">Submenu_Button1</include>
+				<include condition="Skin.HasSetting(Home2)">Submenu_Button2</include>
+				<include condition="Skin.HasSetting(Home3)">Submenu_Button3</include>
+				<label>$INFO[System.AddonTitle(Skin.String(HomeCustom3_Addon2))]</label>
+				<onclick>RunAddon($INFO[Skin.String(HomeCustom3_Addon2)])</onclick>
+				<visible>Skin.HasSetting(HomeCustom3_Shortcuts) + !IsEmpty(Skin.String(HomeCustom3_Addon2))</visible>
+			</control>
+			<control type="button" id="92605">
+				<include condition="![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)]">Submenu_Button1</include>
+				<include condition="Skin.HasSetting(Home2)">Submenu_Button2</include>
+				<include condition="Skin.HasSetting(Home3)">Submenu_Button3</include>
+				<label>$INFO[Skin.String(HomeCustom3_Favourite3_Label)]</label>
+				<onclick>$INFO[Skin.String(HomeCustom3_Favourite3_Path)]</onclick>
+				<visible>Skin.HasSetting(HomeCustom3_Shortcuts) + !IsEmpty(Skin.String(HomeCustom3_Favourite3_Path))</visible>
+			</control>
+			<control type="button" id="92606">
+				<include condition="![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)]">Submenu_Button1</include>
+				<include condition="Skin.HasSetting(Home2)">Submenu_Button2</include>
+				<include condition="Skin.HasSetting(Home3)">Submenu_Button3</include>
+				<label>$INFO[System.AddonTitle(Skin.String(HomeCustom3_Addon3))]</label>
+				<onclick>RunAddon($INFO[Skin.String(HomeCustom3_Addon3)])</onclick>
+				<visible>Skin.HasSetting(HomeCustom3_Shortcuts) + !IsEmpty(Skin.String(HomeCustom3_Addon3))</visible>
+			</control>
+			<control type="button" id="92607">
+				<include condition="![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)]">Submenu_Button1</include>
+				<include condition="Skin.HasSetting(Home2)">Submenu_Button2</include>
+				<include condition="Skin.HasSetting(Home3)">Submenu_Button3</include>
+				<label>$INFO[Skin.String(HomeCustom3_Favourite4_Label)]</label>
+				<onclick>$INFO[Skin.String(HomeCustom3_Favourite4_Path)]</onclick>
+				<visible>Skin.HasSetting(HomeCustom3_Shortcuts) + !IsEmpty(Skin.String(HomeCustom3_Favourite4_Path))</visible>
+			</control>
+			<control type="button" id="92608">
+				<include condition="![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)]">Submenu_Button1</include>
+				<include condition="Skin.HasSetting(Home2)">Submenu_Button2</include>
+				<include condition="Skin.HasSetting(Home3)">Submenu_Button3</include>
+				<label>$INFO[System.AddonTitle(Skin.String(HomeCustom3_Addon4))]</label>
+				<onclick>RunAddon($INFO[Skin.String(HomeCustom3_Addon4)])</onclick>
+				<visible>Skin.HasSetting(HomeCustom3_Shortcuts) + !IsEmpty(Skin.String(HomeCustom3_Addon4))</visible>
+			</control>
+			<control type="button" id="92609">
+				<include condition="![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)]">Submenu_Button1</include>
+				<include condition="Skin.HasSetting(Home2)">Submenu_Button2</include>
+				<include condition="Skin.HasSetting(Home3)">Submenu_Button3</include>
+				<label>$INFO[Skin.String(HomeCustom3_Favourite5_Label)]</label>
+				<onclick>$INFO[Skin.String(HomeCustom3_Favourite5_Path)]</onclick>
+				<visible>Skin.HasSetting(HomeCustom3_Shortcuts) + !IsEmpty(Skin.String(HomeCustom3_Favourite5_Path))</visible>
+			</control>
+			<control type="button" id="92610">
+				<include condition="![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)]">Submenu_Button1</include>
+				<include condition="Skin.HasSetting(Home2)">Submenu_Button2</include>
+				<include condition="Skin.HasSetting(Home3)">Submenu_Button3</include>
+				<onclick>RunAddon($INFO[Skin.String(HomeCustom3_Addon5)])</onclick>
+				<visible>Skin.HasSetting(HomeCustom3_Shortcuts) + !IsEmpty(Skin.String(HomeCustom3_Addon5))</visible>
+			</control>
+		</control>
+		<!--Custom 4 Submenu -->
+		<control type="grouplist" id="9027">
+			<include condition="![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)]">Submenu_VerticalDetails1</include>
+			<include condition="Skin.HasSetting(Home2)">Submenu_VerticalDetails2</include>
+			<include condition="Skin.HasSetting(Home3)">Submenu_VerticalDetails3</include>
+			<onup>9027</onup>
+			<ondown>9027</ondown>
+			<visible>Container(9000).HasFocus(20)</visible>
+			<control type="button" id="92701">
+				<include condition="![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)]">Submenu_Button1</include>
+				<include condition="Skin.HasSetting(Home2)">Submenu_Button2</include>
+				<include condition="Skin.HasSetting(Home3)">Submenu_Button3</include>
+				<label>$INFO[Skin.String(HomeCustom4_Favourite1_Label)]</label>
+				<onclick>$INFO[Skin.String(HomeCustom4_Favourite1_Path)]</onclick>
+				<visible>Skin.HasSetting(HomeCustom4_Shortcuts) + !IsEmpty(Skin.String(HomeCustom4_Favourite1_Path))</visible>
+			</control>
+			<control type="button" id="92702">
+				<include condition="![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)]">Submenu_Button1</include>
+				<include condition="Skin.HasSetting(Home2)">Submenu_Button2</include>
+				<include condition="Skin.HasSetting(Home3)">Submenu_Button3</include>
+				<label>$INFO[System.AddonTitle(Skin.String(HomeCustom4_Addon1))]</label>
+				<onclick>RunAddon($INFO[Skin.String(HomeCustom4_Addon1)])</onclick>
+				<visible>Skin.HasSetting(HomeCustom4_Shortcuts) + !IsEmpty(Skin.String(HomeCustom4_Addon1))</visible>
+			</control>
+			<control type="button" id="92703">
+				<include condition="![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)]">Submenu_Button1</include>
+				<include condition="Skin.HasSetting(Home2)">Submenu_Button2</include>
+				<include condition="Skin.HasSetting(Home3)">Submenu_Button3</include>
+				<label>$INFO[Skin.String(HomeCustom4_Favourite2_Label)]</label>
+				<onclick>$INFO[Skin.String(HomeCustom4_Favourite2_Path)]</onclick>
+				<visible>Skin.HasSetting(HomeCustom4_Shortcuts) + !IsEmpty(Skin.String(HomeCustom4_Favourite2_Path))</visible>
+			</control>
+			<control type="button" id="92704">
+				<include condition="![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)]">Submenu_Button1</include>
+				<include condition="Skin.HasSetting(Home2)">Submenu_Button2</include>
+				<include condition="Skin.HasSetting(Home3)">Submenu_Button3</include>
+				<label>$INFO[System.AddonTitle(Skin.String(HomeCustom4_Addon2))]</label>
+				<onclick>RunAddon($INFO[Skin.String(HomeCustom4_Addon2)])</onclick>
+				<visible>Skin.HasSetting(HomeCustom4_Shortcuts) + !IsEmpty(Skin.String(HomeCustom4_Addon2))</visible>
+			</control>
+			<control type="button" id="92705">
+				<include condition="![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)]">Submenu_Button1</include>
+				<include condition="Skin.HasSetting(Home2)">Submenu_Button2</include>
+				<include condition="Skin.HasSetting(Home3)">Submenu_Button3</include>
+				<label>$INFO[Skin.String(HomeCustom4_Favourite3_Label)]</label>
+				<onclick>$INFO[Skin.String(HomeCustom4_Favourite3_Path)]</onclick>
+				<visible>Skin.HasSetting(HomeCustom4_Shortcuts) + !IsEmpty(Skin.String(HomeCustom4_Favourite3_Path))</visible>
+			</control>
+			<control type="button" id="92706">
+				<include condition="![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)]">Submenu_Button1</include>
+				<include condition="Skin.HasSetting(Home2)">Submenu_Button2</include>
+				<include condition="Skin.HasSetting(Home3)">Submenu_Button3</include>
+				<label>$INFO[System.AddonTitle(Skin.String(HomeCustom4_Addon3))]</label>
+				<onclick>RunAddon($INFO[Skin.String(HomeCustom4_Addon3)])</onclick>
+				<visible>Skin.HasSetting(HomeCustom4_Shortcuts) + !IsEmpty(Skin.String(HomeCustom4_Addon3))</visible>
+			</control>
+			<control type="button" id="92707">
+				<include condition="![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)]">Submenu_Button1</include>
+				<include condition="Skin.HasSetting(Home2)">Submenu_Button2</include>
+				<include condition="Skin.HasSetting(Home3)">Submenu_Button3</include>
+				<label>$INFO[Skin.String(HomeCustom4_Favourite4_Label)]</label>
+				<onclick>$INFO[Skin.String(HomeCustom4_Favourite4_Path)]</onclick>
+				<visible>Skin.HasSetting(HomeCustom4_Shortcuts) + !IsEmpty(Skin.String(HomeCustom4_Favourite4_Path))</visible>
+			</control>
+			<control type="button" id="92708">
+				<include condition="![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)]">Submenu_Button1</include>
+				<include condition="Skin.HasSetting(Home2)">Submenu_Button2</include>
+				<include condition="Skin.HasSetting(Home3)">Submenu_Button3</include>
+				<label>$INFO[System.AddonTitle(Skin.String(HomeCustom4_Addon4))]</label>
+				<onclick>RunAddon($INFO[Skin.String(HomeCustom4_Addon4)])</onclick>
+				<visible>Skin.HasSetting(HomeCustom4_Shortcuts) + !IsEmpty(Skin.String(HomeCustom4_Addon4))</visible>
+			</control>
+			<control type="button" id="92709">
+				<include condition="![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)]">Submenu_Button1</include>
+				<include condition="Skin.HasSetting(Home2)">Submenu_Button2</include>
+				<include condition="Skin.HasSetting(Home3)">Submenu_Button3</include>
+				<label>$INFO[Skin.String(HomeCustom4_Favourite5_Label)]</label>
+				<onclick>$INFO[Skin.String(HomeCustom4_Favourite5_Path)]</onclick>
+				<visible>Skin.HasSetting(HomeCustom4_Shortcuts) + !IsEmpty(Skin.String(HomeCustom4_Favourite5_Path))</visible>
+			</control>
+			<control type="button" id="92710">
+				<include condition="![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)]">Submenu_Button1</include>
+				<include condition="Skin.HasSetting(Home2)">Submenu_Button2</include>
+				<include condition="Skin.HasSetting(Home3)">Submenu_Button3</include>
+				<onclick>RunAddon($INFO[Skin.String(HomeCustom4_Addon5)])</onclick>
+				<visible>Skin.HasSetting(HomeCustom4_Shortcuts) + !IsEmpty(Skin.String(HomeCustom4_Addon5))</visible>
+			</control>
+		</control>
 	</include>
 
 	<!-- Home Stats/Media Totals -->
@@ -2171,7 +2640,7 @@
 					<height>70</height>
 					<orientation>vertical</orientation>
 					<itemgap>0</itemgap>
-					<visible>IntegerGreaterThan(Window.Property(Episodes.Count),0) + [![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)] | [Container(9000).HasFocus(3) + !Skin.HasSetting(NoTVShowsSubs) + ![Player.HasAudio + Skin.HasSetting(MusicCoverArtOverlay)]]</visible>
+					<visible>IntegerGreaterThan(Window.Property(Episodes.Count),0) + [![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)] | [Container(9000).HasFocus(3) + !Skin.HasSetting(NoTVShowsSubs) + ![Player.HasAudio + Skin.HasSetting(MusicCoverArtOverlay)]]]</visible>
 					<control type="grouplist">
 						<height>24</height>
 						<orientation>horizontal</orientation>
@@ -2230,7 +2699,7 @@
 					<height>70</height>
 					<orientation>vertical</orientation>
 					<itemgap>0</itemgap>
-					<visible>IntegerGreaterThan(Window.Property(Music.SongsCount),0) + [![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)] | [Container(9000).HasFocus(7) + !Skin.HasSetting(NoMusicSubs) + ![Player.HasAudio + Skin.HasSetting(MusicCoverArtOverlay)]]</visible>
+					<visible>IntegerGreaterThan(Window.Property(Music.SongsCount),0) + [![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)] | [Container(9000).HasFocus(7) + !Skin.HasSetting(NoMusicSubs) + ![Player.HasAudio + Skin.HasSetting(MusicCoverArtOverlay)]]]</visible>
 					<control type="grouplist">
 						<height>24</height>
 						<orientation>horizontal</orientation>
@@ -2289,7 +2758,7 @@
 					<height>26</height>
 					<orientation>vertical</orientation>
 					<itemgap>0</itemgap>
-					<visible>IntegerGreaterThan(Window.Property(MusicVideos.Count),0) + [![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)] | [Container(9000).HasFocus(8) + !Skin.HasSetting(NoMusicVideosSubs) + ![Player.HasAudio + Skin.HasSetting(MusicCoverArtOverlay)]]</visible>
+					<visible>IntegerGreaterThan(Window.Property(MusicVideos.Count),0) + [![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)] | [Container(9000).HasFocus(8) + !Skin.HasSetting(NoMusicVideosSubs) + ![Player.HasAudio + Skin.HasSetting(MusicCoverArtOverlay)]]]</visible>
 					<control type="grouplist">
 						<height>24</height>
 						<orientation>horizontal</orientation>
@@ -2311,7 +2780,6 @@
 			</control>
 		</control>
 	</include>
-
 
 	<include name="HomeDeck">
 		<control type="group">
@@ -2612,7 +3080,7 @@
 						<scrolltime>200</scrolltime>
 						<!-- Setting preloaditems to anything greater than zero currently causes -->
 						<!-- flickering/slowdown if any home items are hidden.  -->
-						<!-- See http://trac.xbmc.org/ticket/12145 and https://github.com/stoli/Metropolis/issues/21 -->
+						<!-- See http://trac.kodi.tv/ticket/12145 and https://github.com/stoli/Metropolis/issues/21 -->
 						<!--<preloaditems>2</preloaditems>-->
 						<preloaditems>0</preloaditems>
 						<visible>Container(9000).HasFocus(11)</visible>
@@ -3268,83 +3736,83 @@
 		<content>
 			<item id="1">
 				<description>Recently Added Movie 1</description>
-				<label>$INFO[Window(Home).Property(LatestMovie.1.Title)]</label>
-				<icon>$INFO[Window(Home).Property(LatestMovie.1.Thumb)]</icon>
-				<thumb>$INFO[Window(Home).Property(LatestMovie.1.Fanart)]</thumb>
-				<onclick>PlayMedia($INFO[Window(Home).Property(LatestMovie.1.Path)])</onclick>
-				<visible>!IsEmpty(Window(Home).Property(LatestMovie.1.Path))</visible>
+				<label>$INFO[Window(Home).Property(RecentMovie.1.Title)]</label>
+				<icon>$INFO[Window(Home).Property(RecentMovie.1.Art(thumb))]</icon>
+				<thumb>$INFO[Window(Home).Property(RecentMovie.1.Art(fanart))]</thumb>
+				<onclick>$INFO[Window(Home).Property(RecentMovie.1.Play)]</onclick>
+				<visible>!IsEmpty(Window(Home).Property(RecentMovie.1.Path))</visible>
 			</item>
 			<item id="2">
 				<description>Recently Added Movie 2</description>
-				<label>$INFO[Window(Home).Property(LatestMovie.2.Title)]</label>
-				<icon>$INFO[Window(Home).Property(LatestMovie.2.Thumb)]</icon>
-				<thumb>$INFO[Window(Home).Property(LatestMovie.2.Fanart)]</thumb>
-				<onclick>PlayMedia($INFO[Window(Home).Property(LatestMovie.2.Path)])</onclick>
-				<visible>!IsEmpty(Window(Home).Property(LatestMovie.2.Path))</visible>
+				<label>$INFO[Window(Home).Property(RecentMovie.2.Title)]</label>
+				<icon>$INFO[Window(Home).Property(RecentMovie.2.Art(thumb))]</icon>
+				<thumb>$INFO[Window(Home).Property(RecentMovie.2.Art(fanart))]</thumb>
+				<onclick>$INFO[Window(Home).Property(RecentMovie.2.Play)]</onclick>
+				<visible>!IsEmpty(Window(Home).Property(RecentMovie.2.Path))</visible>
 			</item>
 			<item id="3">
 				<description>Recently Added Movie 3</description>
-				<label>$INFO[Window(Home).Property(LatestMovie.3.Title)]</label>
-				<icon>$INFO[Window(Home).Property(LatestMovie.3.Thumb)]</icon>
-				<thumb>$INFO[Window(Home).Property(LatestMovie.3.Fanart)]</thumb>
-				<onclick>PlayMedia($INFO[Window(Home).Property(LatestMovie.3.Path)])</onclick>
-				<visible>!IsEmpty(Window(Home).Property(LatestMovie.3.Path))</visible>
+				<label>$INFO[Window(Home).Property(RecentMovie.3.Title)]</label>
+				<icon>$INFO[Window(Home).Property(RecentMovie.3.Art(thumb))]</icon>
+				<thumb>$INFO[Window(Home).Property(RecentMovie.3.Art(fanart))]</thumb>
+				<onclick>$INFO[Window(Home).Property(RecentMovie.3.Play)]</onclick>
+				<visible>!IsEmpty(Window(Home).Property(RecentMovie.3.Path))</visible>
 			</item>
 			<item id="4">
 				<description>Recently Added Movie 4</description>
-				<label>$INFO[Window(Home).Property(LatestMovie.4.Title)]</label>
-				<icon>$INFO[Window(Home).Property(LatestMovie.4.Thumb)]</icon>
-				<thumb>$INFO[Window(Home).Property(LatestMovie.4.Fanart)]</thumb>
-				<onclick>PlayMedia($INFO[Window(Home).Property(LatestMovie.4.Path)])</onclick>
-				<visible>!IsEmpty(Window(Home).Property(LatestMovie.4.Path))</visible>
+				<label>$INFO[Window(Home).Property(RecentMovie.4.Title)]</label>
+				<icon>$INFO[Window(Home).Property(RecentMovie.4.Art(thumb))]</icon>
+				<thumb>$INFO[Window(Home).Property(RecentMovie.4.Art(fanart))]</thumb>
+				<onclick>$INFO[Window(Home).Property(RecentMovie.4.Play)]</onclick>
+				<visible>!IsEmpty(Window(Home).Property(RecentMovie.4.Path))</visible>
 			</item>
 			<item id="5">
 				<description>Recently Added Movie 5</description>
-				<label>$INFO[Window(Home).Property(LatestMovie.5.Title)]</label>
-				<icon>$INFO[Window(Home).Property(LatestMovie.5.Thumb)]</icon>
-				<thumb>$INFO[Window(Home).Property(LatestMovie.5.Fanart)]</thumb>
-				<onclick>PlayMedia($INFO[Window(Home).Property(LatestMovie.5.Path)])</onclick>
-				<visible>!IsEmpty(Window(Home).Property(LatestMovie.5.Path))</visible>
+				<label>$INFO[Window(Home).Property(RecentMovie.5.Title)]</label>
+				<icon>$INFO[Window(Home).Property(RecentMovie.5.Art(thumb))]</icon>
+				<thumb>$INFO[Window(Home).Property(RecentMovie.5.Art(fanart))]</thumb>
+				<onclick>$INFO[Window(Home).Property(RecentMovie.5.Play)]</onclick>
+				<visible>!IsEmpty(Window(Home).Property(RecentMovie.5.Path))</visible>
 			</item>
 			<item id="6">
 				<description>Recently Added Movie 6</description>
-				<label>$INFO[Window(Home).Property(LatestMovie.6.Title)]</label>
-				<icon>$INFO[Window(Home).Property(LatestMovie.6.Thumb)]</icon>
-				<thumb>$INFO[Window(Home).Property(LatestMovie.6.Fanart)]</thumb>
-				<onclick>PlayMedia($INFO[Window(Home).Property(LatestMovie.6.Path)])</onclick>
-				<visible>!IsEmpty(Window(Home).Property(LatestMovie.6.Path))</visible>
+				<label>$INFO[Window(Home).Property(RecentMovie.6.Title)]</label>
+				<icon>$INFO[Window(Home).Property(RecentMovie.6.Art(thumb))]</icon>
+				<thumb>$INFO[Window(Home).Property(RecentMovie.6.Art(fanart))]</thumb>
+				<onclick>$INFO[Window(Home).Property(RecentMovie.6.Play)]</onclick>
+				<visible>!IsEmpty(Window(Home).Property(RecentMovie.6.Path))</visible>
 			</item>
 			<item id="7">
 				<description>Recently Added Movie 7</description>
-				<label>$INFO[Window(Home).Property(LatestMovie.7.Title)]</label>
-				<icon>$INFO[Window(Home).Property(LatestMovie.7.Thumb)]</icon>
-				<thumb>$INFO[Window(Home).Property(LatestMovie.7.Fanart)]</thumb>
-				<onclick>PlayMedia($INFO[Window(Home).Property(LatestMovie.7.Path)])</onclick>
-				<visible>!IsEmpty(Window(Home).Property(LatestMovie.7.Path))</visible>
+				<label>$INFO[Window(Home).Property(RecentMovie.7.Title)]</label>
+				<icon>$INFO[Window(Home).Property(RecentMovie.7.Art(thumb))]</icon>
+				<thumb>$INFO[Window(Home).Property(RecentMovie.7.Art(fanart))]</thumb>
+				<onclick>$INFO[Window(Home).Property(RecentMovie.7.Play)]</onclick>
+				<visible>!IsEmpty(Window(Home).Property(RecentMovie.7.Path))</visible>
 			</item>
 			<item id="8">
 				<description>Recently Added Movie 8</description>
-				<label>$INFO[Window(Home).Property(LatestMovie.8.Title)]</label>
-				<icon>$INFO[Window(Home).Property(LatestMovie.8.Thumb)]</icon>
-				<thumb>$INFO[Window(Home).Property(LatestMovie.8.Fanart)]</thumb>
-				<onclick>PlayMedia($INFO[Window(Home).Property(LatestMovie.8.Path)])</onclick>
-				<visible>!IsEmpty(Window(Home).Property(LatestMovie.8.Path))</visible>
+				<label>$INFO[Window(Home).Property(RecentMovie.8.Title)]</label>
+				<icon>$INFO[Window(Home).Property(RecentMovie.8.Art(thumb))]</icon>
+				<thumb>$INFO[Window(Home).Property(RecentMovie.8.Art(fanart))]</thumb>
+				<onclick>$INFO[Window(Home).Property(RecentMovie.8.Play)]</onclick>
+				<visible>!IsEmpty(Window(Home).Property(RecentMovie.8.Path))</visible>
 			</item>
 			<item id="9">
 				<description>Recently Added Movie 9</description>
-				<label>$INFO[Window(Home).Property(LatestMovie.9.Title)]</label>
-				<icon>$INFO[Window(Home).Property(LatestMovie.9.Thumb)]</icon>
-				<thumb>$INFO[Window(Home).Property(LatestMovie.9.Fanart)]</thumb>
-				<onclick>PlayMedia($INFO[Window(Home).Property(LatestMovie.9.Path)])</onclick>
-				<visible>!IsEmpty(Window(Home).Property(LatestMovie.9.Path))</visible>
+				<label>$INFO[Window(Home).Property(RecentMovie.9.Title)]</label>
+				<icon>$INFO[Window(Home).Property(RecentMovie.9.Art(thumb))]</icon>
+				<thumb>$INFO[Window(Home).Property(RecentMovie.9.Art(fanart))]</thumb>
+				<onclick>$INFO[Window(Home).Property(RecentMovie.9.Play)]</onclick>
+				<visible>!IsEmpty(Window(Home).Property(RecentMovie.9.Path))</visible>
 			</item>
 			<item id="10">
 				<description>Recently Added Movie 10</description>
-				<label>$INFO[Window(Home).Property(LatestMovie.10.Title)]</label>
-				<icon>$INFO[Window(Home).Property(LatestMovie.10.Thumb)]</icon>
-				<thumb>$INFO[Window(Home).Property(LatestMovie.10.Fanart)]</thumb>
-				<onclick>PlayMedia($INFO[Window(Home).Property(LatestMovie.10.Path)])</onclick>
-				<visible>!IsEmpty(Window(Home).Property(LatestMovie.10.Path))</visible>
+				<label>$INFO[Window(Home).Property(RecentMovie.10.Title)]</label>
+				<icon>$INFO[Window(Home).Property(RecentMovie.10.Art(thumb))]</icon>
+				<thumb>$INFO[Window(Home).Property(RecentMovie.10.Art(fanart))]</thumb>
+				<onclick>$INFO[Window(Home).Property(RecentMovie.10.Play)]</onclick>
+				<visible>!IsEmpty(Window(Home).Property(RecentMovie.10.Path))</visible>
 			</item>
 		</content>
 	</include>
@@ -3353,83 +3821,83 @@
 		<content>
 			<item id="1">
 				<description>Recently Added Episode 1</description>
-				<label>$INFO[Window(Home).Property(LatestEpisode.1.ShowTitle)] $INFO[Window(Home).Property(LatestEpisode.1.EpisodeNo)] - $INFO[Window(Home).Property(LatestEpisode.1.EpisodeTitle)]</label>
-				<icon>$INFO[Window(Home).Property(LatestEpisode.1.Fanart)]</icon>
-				<thumb>$INFO[Window(Home).Property(LatestEpisode.1.Thumb)]</thumb>
-				<onclick>PlayMedia($INFO[Window(Home).Property(LatestEpisode.1.Path)])</onclick>
-				<visible>!IsEmpty(Window(Home).Property(LatestEpisode.1.Path))</visible>
+				<label>$INFO[Window(Home).Property(RecentEpisode.1.TVShowTitle)] $INFO[Window(Home).Property(RecentEpisode.1.EpisodeNo)] - $INFO[Window(Home).Property(RecentEpisode.1.Title)]</label>
+				<icon>$INFO[Window(Home).Property(RecentEpisode.1.Art(fanart))]</icon>
+				<thumb>$INFO[Window(Home).Property(RecentEpisode.1.Art(thumb))]</thumb>
+				<onclick>$INFO[Window(Home).Property(RecentEpisode.1.Play)]</onclick>
+				<visible>!IsEmpty(Window(Home).Property(RecentEpisode.1.Path))</visible>
 			</item>
 			<item id="2">
 				<description>Recently Added Episode 2</description>
-				<label>$INFO[Window(Home).Property(LatestEpisode.2.ShowTitle)] $INFO[Window(Home).Property(LatestEpisode.2.EpisodeNo)] - $INFO[Window(Home).Property(LatestEpisode.2.EpisodeTitle)]</label>
-				<icon>$INFO[Window(Home).Property(LatestEpisode.2.Fanart)]</icon>
-				<thumb>$INFO[Window(Home).Property(LatestEpisode.2.Thumb)]</thumb>
-				<onclick>PlayMedia($INFO[Window(Home).Property(LatestEpisode.2.Path)])</onclick>
-				<visible>!IsEmpty(Window(Home).Property(LatestEpisode.2.Path))</visible>
+				<label>$INFO[Window(Home).Property(RecentEpisode.2.TVShowTitle)] $INFO[Window(Home).Property(RecentEpisode.2.EpisodeNo)] - $INFO[Window(Home).Property(RecentEpisode.2.Title)]</label>
+				<icon>$INFO[Window(Home).Property(RecentEpisode.2.Art(fanart))]</icon>
+				<thumb>$INFO[Window(Home).Property(RecentEpisode.2.Art(thumb))]</thumb>
+				<onclick>$INFO[Window(Home).Property(RecentEpisode.2.Play)]</onclick>
+				<visible>!IsEmpty(Window(Home).Property(RecentEpisode.2.Path))</visible>
 			</item>
 			<item id="3">
 				<description>Recently Added Episode 3</description>
-				<label>$INFO[Window(Home).Property(LatestEpisode.3.ShowTitle)] $INFO[Window(Home).Property(LatestEpisode.3.EpisodeNo)] - $INFO[Window(Home).Property(LatestEpisode.3.EpisodeTitle)]</label>
-				<icon>$INFO[Window(Home).Property(LatestEpisode.3.Fanart)]</icon>
-				<thumb>$INFO[Window(Home).Property(LatestEpisode.3.Thumb)]</thumb>
-				<onclick>PlayMedia($INFO[Window(Home).Property(LatestEpisode.3.Path)])</onclick>
-				<visible>!IsEmpty(Window(Home).Property(LatestEpisode.3.Path))</visible>
+				<label>$INFO[Window(Home).Property(RecentEpisode.3.TVShowTitle)] $INFO[Window(Home).Property(RecentEpisode.3.EpisodeNo)] - $INFO[Window(Home).Property(RecentEpisode.3.Title)]</label>
+				<icon>$INFO[Window(Home).Property(RecentEpisode.3.Art(fanart))]</icon>
+				<thumb>$INFO[Window(Home).Property(RecentEpisode.3.Art(thumb))]</thumb>
+				<onclick>$INFO[Window(Home).Property(RecentEpisode.3.Play)]</onclick>
+				<visible>!IsEmpty(Window(Home).Property(RecentEpisode.3.Path))</visible>
 			</item>
 			<item id="4">
 				<description>Recently Added Episode 4</description>
-				<label>$INFO[Window(Home).Property(LatestEpisode.4.ShowTitle)] $INFO[Window(Home).Property(LatestEpisode.4.EpisodeNo)] - $INFO[Window(Home).Property(LatestEpisode.4.EpisodeTitle)]</label>
-				<icon>$INFO[Window(Home).Property(LatestEpisode.4.Fanart)]</icon>
-				<thumb>$INFO[Window(Home).Property(LatestEpisode.4.Thumb)]</thumb>
-				<onclick>PlayMedia($INFO[Window(Home).Property(LatestEpisode.4.Path)])</onclick>
-				<visible>!IsEmpty(Window(Home).Property(LatestEpisode.4.Path))</visible>
+				<label>$INFO[Window(Home).Property(RecentEpisode.4.TVShowTitle)] $INFO[Window(Home).Property(RecentEpisode.4.EpisodeNo)] - $INFO[Window(Home).Property(RecentEpisode.4.Title)]</label>
+				<icon>$INFO[Window(Home).Property(RecentEpisode.4.Art(fanart))]</icon>
+				<thumb>$INFO[Window(Home).Property(RecentEpisode.4.Art(thumb))]</thumb>
+				<onclick>$INFO[Window(Home).Property(RecentEpisode.4.Play)]</onclick>
+				<visible>!IsEmpty(Window(Home).Property(RecentEpisode.4.Path))</visible>
 			</item>
 			<item id="5">
 				<description>Recently Added Episode 5</description>
-				<label>$INFO[Window(Home).Property(LatestEpisode.5.ShowTitle)] $INFO[Window(Home).Property(LatestEpisode.5.EpisodeNo)] - $INFO[Window(Home).Property(LatestEpisode.5.EpisodeTitle)]</label>
-				<icon>$INFO[Window(Home).Property(LatestEpisode.5.Fanart)]</icon>
-				<thumb>$INFO[Window(Home).Property(LatestEpisode.5.Thumb)]</thumb>
-				<onclick>PlayMedia($INFO[Window(Home).Property(LatestEpisode.5.Path)])</onclick>
-				<visible>!IsEmpty(Window(Home).Property(LatestEpisode.5.Path))</visible>
+				<label>$INFO[Window(Home).Property(RecentEpisode.5.TVShowTitle)] $INFO[Window(Home).Property(RecentEpisode.5.EpisodeNo)] - $INFO[Window(Home).Property(RecentEpisode.5.Title)]</label>
+				<icon>$INFO[Window(Home).Property(RecentEpisode.5.Art(fanart))]</icon>
+				<thumb>$INFO[Window(Home).Property(RecentEpisode.5.Art(thumb))]</thumb>
+				<onclick>$INFO[Window(Home).Property(RecentEpisode.5.Play)]</onclick>
+				<visible>!IsEmpty(Window(Home).Property(RecentEpisode.5.Path))</visible>
 			</item>
 			<item id="6">
 				<description>Recently Added Episode 6</description>
-				<label>$INFO[Window(Home).Property(LatestEpisode.6.ShowTitle)] $INFO[Window(Home).Property(LatestEpisode.6.EpisodeNo)] - $INFO[Window(Home).Property(LatestEpisode.6.EpisodeTitle)]</label>
-				<icon>$INFO[Window(Home).Property(LatestEpisode.6.Fanart)]</icon>
-				<thumb>$INFO[Window(Home).Property(LatestEpisode.6.Thumb)]</thumb>
-				<onclick>PlayMedia($INFO[Window(Home).Property(LatestEpisode.6.Path)])</onclick>
-				<visible>!IsEmpty(Window(Home).Property(LatestEpisode.6.Path))</visible>
+				<label>$INFO[Window(Home).Property(RecentEpisode.6.TVShowTitle)] $INFO[Window(Home).Property(RecentEpisode.6.EpisodeNo)] - $INFO[Window(Home).Property(RecentEpisode.6.Title)]</label>
+				<icon>$INFO[Window(Home).Property(RecentEpisode.6.Art(fanart))]</icon>
+				<thumb>$INFO[Window(Home).Property(RecentEpisode.6.Art(thumb))]</thumb>
+				<onclick>$INFO[Window(Home).Property(RecentEpisode.6.Play)]</onclick>
+				<visible>!IsEmpty(Window(Home).Property(RecentEpisode.6.Path))</visible>
 			</item>
 			<item id="7">
 				<description>Recently Added Episode 7</description>
-				<label>$INFO[Window(Home).Property(LatestEpisode.7.ShowTitle)] $INFO[Window(Home).Property(LatestEpisode.7.EpisodeNo)] - $INFO[Window(Home).Property(LatestEpisode.7.EpisodeTitle)]</label>
-				<icon>$INFO[Window(Home).Property(LatestEpisode.7.Fanart)]</icon>
-				<thumb>$INFO[Window(Home).Property(LatestEpisode.7.Thumb)]</thumb>
-				<onclick>PlayMedia($INFO[Window(Home).Property(LatestEpisode.7.Path)])</onclick>
-				<visible>!IsEmpty(Window(Home).Property(LatestEpisode.7.Path))</visible>
+				<label>$INFO[Window(Home).Property(RecentEpisode.7.TVShowTitle)] $INFO[Window(Home).Property(RecentEpisode.7.EpisodeNo)] - $INFO[Window(Home).Property(RecentEpisode.7.Title)]</label>
+				<icon>$INFO[Window(Home).Property(RecentEpisode.7.Art(fanart))]</icon>
+				<thumb>$INFO[Window(Home).Property(RecentEpisode.7.Art(thumb))]</thumb>
+				<onclick>$INFO[Window(Home).Property(RecentEpisode.7.Play)]</onclick>
+				<visible>!IsEmpty(Window(Home).Property(RecentEpisode.7.Path))</visible>
 			</item>
 			<item id="8">
 				<description>Recently Added Episode 8</description>
-				<label>$INFO[Window(Home).Property(LatestEpisode.8.ShowTitle)] $INFO[Window(Home).Property(LatestEpisode.8.EpisodeNo)] - $INFO[Window(Home).Property(LatestEpisode.8.EpisodeTitle)]</label>
-				<icon>$INFO[Window(Home).Property(LatestEpisode.8.Fanart)]</icon>
-				<thumb>$INFO[Window(Home).Property(LatestEpisode.8.Thumb)]</thumb>
-				<onclick>PlayMedia($INFO[Window(Home).Property(LatestEpisode.8.Path)])</onclick>
-				<visible>!IsEmpty(Window(Home).Property(LatestEpisode.8.Path))</visible>
+				<label>$INFO[Window(Home).Property(RecentEpisode.8.TVShowTitle)] $INFO[Window(Home).Property(RecentEpisode.8.EpisodeNo)] - $INFO[Window(Home).Property(RecentEpisode.8.Title)]</label>
+				<icon>$INFO[Window(Home).Property(RecentEpisode.8.Art(fanart))]</icon>
+				<thumb>$INFO[Window(Home).Property(RecentEpisode.8.Art(thumb))]</thumb>
+				<onclick>$INFO[Window(Home).Property(RecentEpisode.8.Play)]</onclick>
+				<visible>!IsEmpty(Window(Home).Property(RecentEpisode.8.Path))</visible>
 			</item>
 			<item id="9">
 				<description>Recently Added Episode 9</description>
-				<label>$INFO[Window(Home).Property(LatestEpisode.9.ShowTitle)] $INFO[Window(Home).Property(LatestEpisode.9.EpisodeNo)] - $INFO[Window(Home).Property(LatestEpisode.9.EpisodeTitle)]</label>
-				<icon>$INFO[Window(Home).Property(LatestEpisode.9.Fanart)]</icon>
-				<thumb>$INFO[Window(Home).Property(LatestEpisode.9.Thumb)]</thumb>
-				<onclick>PlayMedia($INFO[Window(Home).Property(LatestEpisode.9.Path)])</onclick>
-				<visible>!IsEmpty(Window(Home).Property(LatestEpisode.9.Path))</visible>
+				<label>$INFO[Window(Home).Property(RecentEpisode.9.TVShowTitle)] $INFO[Window(Home).Property(RecentEpisode.9.EpisodeNo)] - $INFO[Window(Home).Property(RecentEpisode.9.Title)]</label>
+				<icon>$INFO[Window(Home).Property(RecentEpisode.9.Art(fanart))]</icon>
+				<thumb>$INFO[Window(Home).Property(RecentEpisode.9.Art(thumb))]</thumb>
+				<onclick>$INFO[Window(Home).Property(RecentEpisode.9.Play)]</onclick>
+				<visible>!IsEmpty(Window(Home).Property(RecentEpisode.9.Path))</visible>
 			</item>
 			<item id="10">
 				<description>Recently Added Episode 10</description>
-				<label>$INFO[Window(Home).Property(LatestEpisode.10.ShowTitle)] $INFO[Window(Home).Property(LatestEpisode.10.EpisodeNo)] - $INFO[Window(Home).Property(LatestEpisode.10.EpisodeTitle)]</label>
-				<icon>$INFO[Window(Home).Property(LatestEpisode.10.Fanart)]</icon>
-				<thumb>$INFO[Window(Home).Property(LatestEpisode.10.Thumb)]</thumb>
-				<onclick>PlayMedia($INFO[Window(Home).Property(LatestEpisode.10.Path)])</onclick>
-				<visible>!IsEmpty(Window(Home).Property(LatestEpisode.10.Path))</visible>
+				<label>$INFO[Window(Home).Property(RecentEpisode.10.TVShowTitle)] $INFO[Window(Home).Property(RecentEpisode.10.EpisodeNo)] - $INFO[Window(Home).Property(RecentEpisode.10.Title)]</label>
+				<icon>$INFO[Window(Home).Property(RecentEpisode.10.Art(fanart))]</icon>
+				<thumb>$INFO[Window(Home).Property(RecentEpisode.10.Art(thumb))]</thumb>
+				<onclick>$INFO[Window(Home).Property(RecentEpisode.10.Play)]</onclick>
+				<visible>!IsEmpty(Window(Home).Property(RecentEpisode.10.Path))</visible>
 			</item>
 		</content>
 	</include>
@@ -3438,93 +3906,93 @@
 		<content>
 			<item id="1">
 				<description>Recently Added Album 1</description>
-				<label>$INFO[Window(Home).Property(LatestAlbum.1.Artist)] - $INFO[Window(Home).Property(LatestAlbum.1.Title)]</label>
+				<label>$INFO[Window(Home).Property(RecentAlbum.1.Artist)] - $INFO[Window(Home).Property(RecentAlbum.1.Title)]</label>
 				<icon>-</icon>
-				<thumb>$INFO[Window(Home).Property(LatestAlbum.1.Thumb)]</thumb>
+				<thumb>$INFO[Window(Home).Property(RecentAlbum.1.Thumb)]</thumb>
 				<onclick>Playlist.Clear</onclick>
-				<onclick>PlayMedia($INFO[Window(Home).Property(LatestAlbum.1.Path)])</onclick>
-				<visible>!IsEmpty(Window(Home).Property(LatestAlbum.1.Path))</visible>
+				<onclick>$INFO[Window(Home).Property(RecentAlbum.1.Play)]</onclick>
+				<visible>!IsEmpty(Window(Home).Property(RecentAlbum.1.Play))</visible>
 			</item>
 			<item id="2">
 				<description>Recently Added Album 2</description>
-				<label>$INFO[Window(Home).Property(LatestAlbum.2.Artist)] - $INFO[Window(Home).Property(LatestAlbum.2.Title)]</label>
+				<label>$INFO[Window(Home).Property(RecentAlbum.2.Artist)] - $INFO[Window(Home).Property(RecentAlbum.2.Title)]</label>
 				<icon>-</icon>
-				<thumb>$INFO[Window(Home).Property(LatestAlbum.2.Thumb)]</thumb>
+				<thumb>$INFO[Window(Home).Property(RecentAlbum.2.Thumb)]</thumb>
 				<onclick>Playlist.Clear</onclick>
-				<onclick>PlayMedia($INFO[Window(Home).Property(LatestAlbum.2.Path)])</onclick>
-				<visible>!IsEmpty(Window(Home).Property(LatestAlbum.2.Path))</visible>
+				<onclick>$INFO[Window(Home).Property(RecentAlbum.2.Play)]</onclick>
+				<visible>!IsEmpty(Window(Home).Property(RecentAlbum.2.Play))</visible>
 			</item>
 			<item id="3">
 				<description>Recently Added Album 3</description>
-				<label>$INFO[Window(Home).Property(LatestAlbum.3.Artist)] - $INFO[Window(Home).Property(LatestAlbum.3.Title)]</label>
+				<label>$INFO[Window(Home).Property(RecentAlbum.3.Artist)] - $INFO[Window(Home).Property(RecentAlbum.3.Title)]</label>
 				<icon>-</icon>
-				<thumb>$INFO[Window(Home).Property(LatestAlbum.3.Thumb)]</thumb>
+				<thumb>$INFO[Window(Home).Property(RecentAlbum.3.Thumb)]</thumb>
 				<onclick>Playlist.Clear</onclick>
-				<onclick>PlayMedia($INFO[Window(Home).Property(LatestAlbum.3.Path)])</onclick>
-				<visible>!IsEmpty(Window(Home).Property(LatestAlbum.3.Path))</visible>
+				<onclick>$INFO[Window(Home).Property(RecentAlbum.3.Play)]</onclick>
+				<visible>!IsEmpty(Window(Home).Property(RecentAlbum.3.Play))</visible>
 			</item>
 			<item id="4">
 				<description>Recently Added Album 4</description>
-				<label>$INFO[Window(Home).Property(LatestAlbum.4.Artist)] - $INFO[Window(Home).Property(LatestAlbum.4.Title)]</label>
+				<label>$INFO[Window(Home).Property(RecentAlbum.4.Artist)] - $INFO[Window(Home).Property(RecentAlbum.4.Title)]</label>
 				<icon>-</icon>
-				<thumb>$INFO[Window(Home).Property(LatestAlbum.4.Thumb)]</thumb>
+				<thumb>$INFO[Window(Home).Property(RecentAlbum.4.Thumb)]</thumb>
 				<onclick>Playlist.Clear</onclick>
-				<onclick>PlayMedia($INFO[Window(Home).Property(LatestAlbum.4.Path)])</onclick>
-				<visible>!IsEmpty(Window(Home).Property(LatestAlbum.4.Path))</visible>
+				<onclick>$INFO[Window(Home).Property(RecentAlbum.4.Play)]</onclick>
+				<visible>!IsEmpty(Window(Home).Property(RecentAlbum.4.Play))</visible>
 			</item>
 			<item id="5">
 				<description>Recently Added Album 5</description>
-				<label>$INFO[Window(Home).Property(LatestAlbum.5.Artist)] - $INFO[Window(Home).Property(LatestAlbum.5.Title)]</label>
+				<label>$INFO[Window(Home).Property(RecentAlbum.5.Artist)] - $INFO[Window(Home).Property(RecentAlbum.5.Title)]</label>
 				<icon>-</icon>
-				<thumb>$INFO[Window(Home).Property(LatestAlbum.5.Thumb)]</thumb>
+				<thumb>$INFO[Window(Home).Property(RecentAlbum.5.Thumb)]</thumb>
 				<onclick>Playlist.Clear</onclick>
-				<onclick>PlayMedia($INFO[Window(Home).Property(LatestAlbum.5.Path)])</onclick>
-				<visible>!IsEmpty(Window(Home).Property(LatestAlbum.5.Path))</visible>
+				<onclick>$INFO[Window(Home).Property(RecentAlbum.5.Play)]</onclick>
+				<visible>!IsEmpty(Window(Home).Property(RecentAlbum.5.Play))</visible>
 			</item>
 			<item id="6">
 				<description>Recently Added Album 6</description>
-				<label>$INFO[Window(Home).Property(LatestAlbum.6.Artist)] - $INFO[Window(Home).Property(LatestAlbum.6.Title)]</label>
+				<label>$INFO[Window(Home).Property(RecentAlbum.6.Artist)] - $INFO[Window(Home).Property(RecentAlbum.6.Title)]</label>
 				<icon>-</icon>
-				<thumb>$INFO[Window(Home).Property(LatestAlbum.6.Thumb)]</thumb>
+				<thumb>$INFO[Window(Home).Property(RecentAlbum.6.Thumb)]</thumb>
 				<onclick>Playlist.Clear</onclick>
-				<onclick>PlayMedia($INFO[Window(Home).Property(LatestAlbum.6.Path)])</onclick>
-				<visible>!IsEmpty(Window(Home).Property(LatestAlbum.6.Path))</visible>
+				<onclick>$INFO[Window(Home).Property(RecentAlbum.6.Play)]</onclick>
+				<visible>!IsEmpty(Window(Home).Property(RecentAlbum.6.Play))</visible>
 			</item>
 			<item id="7">
 				<description>Recently Added Album 7</description>
-				<label>$INFO[Window(Home).Property(LatestAlbum.7.Artist)] - $INFO[Window(Home).Property(LatestAlbum.7.Title)]</label>
+				<label>$INFO[Window(Home).Property(RecentAlbum.7.Artist)] - $INFO[Window(Home).Property(RecentAlbum.7.Title)]</label>
 				<icon>-</icon>
-				<thumb>$INFO[Window(Home).Property(LatestAlbum.7.Thumb)]</thumb>
+				<thumb>$INFO[Window(Home).Property(RecentAlbum.7.Thumb)]</thumb>
 				<onclick>Playlist.Clear</onclick>
-				<onclick>PlayMedia($INFO[Window(Home).Property(LatestAlbum.7.Path)])</onclick>
-				<visible>!IsEmpty(Window(Home).Property(LatestAlbum.7.Path))</visible>
+				<onclick>$INFO[Window(Home).Property(RecentAlbum.7.Play)]</onclick>
+				<visible>!IsEmpty(Window(Home).Property(RecentAlbum.7.Play))</visible>
 			</item>
 			<item id="8">
 				<description>Recently Added Album 8</description>
-				<label>$INFO[Window(Home).Property(LatestAlbum.8.Artist)] - $INFO[Window(Home).Property(LatestAlbum.8.Title)]</label>
+				<label>$INFO[Window(Home).Property(RecentAlbum.8.Artist)] - $INFO[Window(Home).Property(RecentAlbum.8.Title)]</label>
 				<icon>-</icon>
-				<thumb>$INFO[Window(Home).Property(LatestAlbum.8.Thumb)]</thumb>
+				<thumb>$INFO[Window(Home).Property(RecentAlbum.8.Thumb)]</thumb>
 				<onclick>Playlist.Clear</onclick>
-				<onclick>PlayMedia($INFO[Window(Home).Property(LatestAlbum.8.Path)])</onclick>
-				<visible>!IsEmpty(Window(Home).Property(LatestAlbum.8.Path))</visible>
+				<onclick>$INFO[Window(Home).Property(RecentAlbum.8.Play)]</onclick>
+				<visible>!IsEmpty(Window(Home).Property(RecentAlbum.8.Play))</visible>
 			</item>
 			<item id="9">
 				<description>Recently Added Album 9</description>
-				<label>$INFO[Window(Home).Property(LatestAlbum.9.Artist)] - $INFO[Window(Home).Property(LatestAlbum.9.Title)]</label>
+				<label>$INFO[Window(Home).Property(RecentAlbum.9.Artist)] - $INFO[Window(Home).Property(RecentAlbum.9.Title)]</label>
 				<icon>-</icon>
-				<thumb>$INFO[Window(Home).Property(LatestAlbum.9.Thumb)]</thumb>
+				<thumb>$INFO[Window(Home).Property(RecentAlbum.9.Thumb)]</thumb>
 				<onclick>Playlist.Clear</onclick>
-				<onclick>PlayMedia($INFO[Window(Home).Property(LatestAlbum.9.Path)])</onclick>
-				<visible>!IsEmpty(Window(Home).Property(LatestAlbum.9.Path))</visible>
+				<onclick>$INFO[Window(Home).Property(RecentAlbum.9.Play)]</onclick>
+				<visible>!IsEmpty(Window(Home).Property(RecentAlbum.9.Play))</visible>
 			</item>
 			<item id="10">
 				<description>Recently Added Album 10</description>
-				<label>$INFO[Window(Home).Property(LatestAlbum.10.Artist)] - $INFO[Window(Home).Property(LatestAlbum.10.Title)]</label>
+				<label>$INFO[Window(Home).Property(RecentAlbum.10.Artist)] - $INFO[Window(Home).Property(RecentAlbum.10.Title)]</label>
 				<icon>-</icon>
-				<thumb>$INFO[Window(Home).Property(LatestAlbum.10.Thumb)]</thumb>
+				<thumb>$INFO[Window(Home).Property(RecentAlbum.10.Thumb)]</thumb>
 				<onclick>Playlist.Clear</onclick>
-				<onclick>PlayMedia($INFO[Window(Home).Property(LatestAlbum.10.Path)])</onclick>
-				<visible>!IsEmpty(Window(Home).Property(LatestAlbum.10.Path))</visible>
+				<onclick>$INFO[Window(Home).Property(RecentAlbum.10.Play)]</onclick>
+				<visible>!IsEmpty(Window(Home).Property(RecentAlbum.10.Play))</visible>
 			</item>
 		</content>
 	</include>
@@ -3533,83 +4001,83 @@
 		<content>
 			<item id="1">
 				<description>Recently Added Music Video 1</description>
-				<label>$INFO[Window(Home).Property(LatestMusicVideo.1.Artist)] - $INFO[Window(Home).Property(LatestMusicVideo.1.Title)]</label>
-				<icon>$INFO[Window(Home).Property(LatestMusicVideo.1.Thumb)]</icon>
-				<thumb>$INFO[Window(Home).Property(LatestMusicVideo.1.Fanart)]</thumb>
-				<onclick>PlayMedia($INFO[Window(Home).Property(LatestMusicVideo.1.Path)])</onclick>
-				<visible>!IsEmpty(Window(Home).Property(LatestMusicVideo.1.Path))</visible>
+				<label>$INFO[Window(Home).Property(RecentMusicVideo.1.Artist)] - $INFO[Window(Home).Property(RecentMusicVideo.1.Title)]</label>
+				<icon>$INFO[Window(Home).Property(RecentMusicVideo.1.Thumb)]</icon>
+				<thumb>$INFO[Window(Home).Property(RecentMusicVideo.1.Fanart)]</thumb>
+				<onclick>$INFO[Window(Home).Property(RecentMusicVideo.1.Play)]</onclick>
+				<visible>!IsEmpty(Window(Home).Property(RecentMusicVideo.1.Path))</visible>
 			</item>
 			<item id="2">
 				<description>Recently Added Music Video 2</description>
-				<label>$INFO[Window(Home).Property(LatestMusicVideo.2.Artist)] - $INFO[Window(Home).Property(LatestMusicVideo.2.Title)]</label>
-				<icon>$INFO[Window(Home).Property(LatestMusicVideo.2.Thumb)]</icon>
-				<thumb>$INFO[Window(Home).Property(LatestMusicVideo.2.Fanart)]</thumb>
-				<onclick>PlayMedia($INFO[Window(Home).Property(LatestMusicVideo.2.Path)])</onclick>
-				<visible>!IsEmpty(Window(Home).Property(LatestMusicVideo.2.Path))</visible>
+				<label>$INFO[Window(Home).Property(RecentMusicVideo.2.Artist)] - $INFO[Window(Home).Property(RecentMusicVideo.2.Title)]</label>
+				<icon>$INFO[Window(Home).Property(RecentMusicVideo.2.Thumb)]</icon>
+				<thumb>$INFO[Window(Home).Property(RecentMusicVideo.2.Fanart)]</thumb>
+				<onclick>$INFO[Window(Home).Property(RecentMusicVideo.2.Play)]</onclick>
+				<visible>!IsEmpty(Window(Home).Property(RecentMusicVideo.2.Path))</visible>
 			</item>
 			<item id="3">
 				<description>Recently Added Music Video 3</description>
-				<label>$INFO[Window(Home).Property(LatestMusicVideo.3.Artist)] - $INFO[Window(Home).Property(LatestMusicVideo.3.Title)]</label>
-				<icon>$INFO[Window(Home).Property(LatestMusicVideo.3.Thumb)]</icon>
-				<thumb>$INFO[Window(Home).Property(LatestMusicVideo.3.Fanart)]</thumb>
-				<onclick>PlayMedia($INFO[Window(Home).Property(LatestMusicVideo.3.Path)])</onclick>
-				<visible>!IsEmpty(Window(Home).Property(LatestMusicVideo.3.Path))</visible>
+				<label>$INFO[Window(Home).Property(RecentMusicVideo.3.Artist)] - $INFO[Window(Home).Property(RecentMusicVideo.3.Title)]</label>
+				<icon>$INFO[Window(Home).Property(RecentMusicVideo.3.Thumb)]</icon>
+				<thumb>$INFO[Window(Home).Property(RecentMusicVideo.3.Fanart)]</thumb>
+				<onclick>$INFO[Window(Home).Property(RecentMusicVideo.3.Play)]</onclick>
+				<visible>!IsEmpty(Window(Home).Property(RecentMusicVideo.3.Path))</visible>
 			</item>
 			<item id="4">
 				<description>Recently Added Music Video 4</description>
-				<label>$INFO[Window(Home).Property(LatestMusicVideo.4.Artist)] - $INFO[Window(Home).Property(LatestMusicVideo.4.Title)]</label>
-				<icon>$INFO[Window(Home).Property(LatestMusicVideo.4.Thumb)]</icon>
-				<thumb>$INFO[Window(Home).Property(LatestMusicVideo.4.Fanart)]</thumb>
-				<onclick>PlayMedia($INFO[Window(Home).Property(LatestMusicVideo.4.Path)])</onclick>
-				<visible>!IsEmpty(Window(Home).Property(LatestMusicVideo.4.Path))</visible>
+				<label>$INFO[Window(Home).Property(RecentMusicVideo.4.Artist)] - $INFO[Window(Home).Property(RecentMusicVideo.4.Title)]</label>
+				<icon>$INFO[Window(Home).Property(RecentMusicVideo.4.Thumb)]</icon>
+				<thumb>$INFO[Window(Home).Property(RecentMusicVideo.4.Fanart)]</thumb>
+				<onclick>$INFO[Window(Home).Property(RecentMusicVideo.4.Play)]</onclick>
+				<visible>!IsEmpty(Window(Home).Property(RecentMusicVideo.4.Path))</visible>
 			</item>
 			<item id="5">
 				<description>Recently Added Music Video 5</description>
-				<label>$INFO[Window(Home).Property(LatestMusicVideo.5.Artist)] - $INFO[Window(Home).Property(LatestMusicVideo.5.Title)]</label>
-				<icon>$INFO[Window(Home).Property(LatestMusicVideo.5.Thumb)]</icon>
-				<thumb>$INFO[Window(Home).Property(LatestMusicVideo.5.Fanart)]</thumb>
-				<onclick>PlayMedia($INFO[Window(Home).Property(LatestMusicVideo.5.Path)])</onclick>
-				<visible>!IsEmpty(Window(Home).Property(LatestMusicVideo.5.Path))</visible>
+				<label>$INFO[Window(Home).Property(RecentMusicVideo.5.Artist)] - $INFO[Window(Home).Property(RecentMusicVideo.5.Title)]</label>
+				<icon>$INFO[Window(Home).Property(RecentMusicVideo.5.Thumb)]</icon>
+				<thumb>$INFO[Window(Home).Property(RecentMusicVideo.5.Fanart)]</thumb>
+				<onclick>$INFO[Window(Home).Property(RecentMusicVideo.5.Play)]</onclick>
+				<visible>!IsEmpty(Window(Home).Property(RecentMusicVideo.5.Path))</visible>
 			</item>
 			<item id="6">
 				<description>Recently Added Music Video 6</description>
-				<label>$INFO[Window(Home).Property(LatestMusicVideo.6.Artist)] - $INFO[Window(Home).Property(LatestMusicVideo.6.Title)]</label>
-				<icon>$INFO[Window(Home).Property(LatestMusicVideo.6.Thumb)]</icon>
-				<thumb>$INFO[Window(Home).Property(LatestMusicVideo.6.Fanart)]</thumb>
-				<onclick>PlayMedia($INFO[Window(Home).Property(LatestMusicVideo.6.Path)])</onclick>
-				<visible>!IsEmpty(Window(Home).Property(LatestMusicVideo.6.Path))</visible>
+				<label>$INFO[Window(Home).Property(RecentMusicVideo.6.Artist)] - $INFO[Window(Home).Property(RecentMusicVideo.6.Title)]</label>
+				<icon>$INFO[Window(Home).Property(RecentMusicVideo.6.Thumb)]</icon>
+				<thumb>$INFO[Window(Home).Property(RecentMusicVideo.6.Fanart)]</thumb>
+				<onclick>$INFO[Window(Home).Property(RecentMusicVideo.6.Play)]</onclick>
+				<visible>!IsEmpty(Window(Home).Property(RecentMusicVideo.6.Path))</visible>
 			</item>
 			<item id="7">
 				<description>Recently Added Music Video 7</description>
-				<label>$INFO[Window(Home).Property(LatestMusicVideo.7.Artist)] - $INFO[Window(Home).Property(LatestMusicVideo.7.Title)]</label>
-				<icon>$INFO[Window(Home).Property(LatestMusicVideo.7.Thumb)]</icon>
-				<thumb>$INFO[Window(Home).Property(LatestMusicVideo.7.Fanart)]</thumb>
-				<onclick>PlayMedia($INFO[Window(Home).Property(LatestMusicVideo.7.Path)])</onclick>
-				<visible>!IsEmpty(Window(Home).Property(LatestMusicVideo.7.Path))</visible>
+				<label>$INFO[Window(Home).Property(RecentMusicVideo.7.Artist)] - $INFO[Window(Home).Property(RecentMusicVideo.7.Title)]</label>
+				<icon>$INFO[Window(Home).Property(RecentMusicVideo.7.Thumb)]</icon>
+				<thumb>$INFO[Window(Home).Property(RecentMusicVideo.7.Fanart)]</thumb>
+				<onclick>$INFO[Window(Home).Property(RecentMusicVideo.7.Play)]</onclick>
+				<visible>!IsEmpty(Window(Home).Property(RecentMusicVideo.7.Path))</visible>
 			</item>
 			<item id="8">
 				<description>Recently Added Music Video 8</description>
-				<label>$INFO[Window(Home).Property(LatestMusicVideo.8.Artist)] - $INFO[Window(Home).Property(LatestMusicVideo.8.Title)]</label>
-				<icon>$INFO[Window(Home).Property(LatestMusicVideo.8.Thumb)]</icon>
-				<thumb>$INFO[Window(Home).Property(LatestMusicVideo.8.Fanart)]</thumb>
-				<onclick>PlayMedia($INFO[Window(Home).Property(LatestMusicVideo.8.Path)])</onclick>
-				<visible>!IsEmpty(Window(Home).Property(LatestMusicVideo.8.Path))</visible>
+				<label>$INFO[Window(Home).Property(RecentMusicVideo.8.Artist)] - $INFO[Window(Home).Property(RecentMusicVideo.8.Title)]</label>
+				<icon>$INFO[Window(Home).Property(RecentMusicVideo.8.Thumb)]</icon>
+				<thumb>$INFO[Window(Home).Property(RecentMusicVideo.8.Fanart)]</thumb>
+				<onclick>$INFO[Window(Home).Property(RecentMusicVideo.8.Play)]</onclick>
+				<visible>!IsEmpty(Window(Home).Property(RecentMusicVideo.8.Path))</visible>
 			</item>
 			<item id="9">
 				<description>Recently Added Music Video 9</description>
-				<label>$INFO[Window(Home).Property(LatestMusicVideo.9.Artist)] - $INFO[Window(Home).Property(LatestMusicVideo.9.Title)]</label>
-				<icon>$INFO[Window(Home).Property(LatestMusicVideo.9.Thumb)]</icon>
-				<thumb>$INFO[Window(Home).Property(LatestMusicVideo.9.Fanart)]</thumb>
-				<onclick>PlayMedia($INFO[Window(Home).Property(LatestMusicVideo.9.Path)])</onclick>
-				<visible>!IsEmpty(Window(Home).Property(LatestMusicVideo.9.Path))</visible>
+				<label>$INFO[Window(Home).Property(RecentMusicVideo.9.Artist)] - $INFO[Window(Home).Property(RecentMusicVideo.9.Title)]</label>
+				<icon>$INFO[Window(Home).Property(RecentMusicVideo.9.Thumb)]</icon>
+				<thumb>$INFO[Window(Home).Property(RecentMusicVideo.9.Fanart)]</thumb>
+				<onclick>$INFO[Window(Home).Property(RecentMusicVideo.9.Play)]</onclick>
+				<visible>!IsEmpty(Window(Home).Property(RecentMusicVideo.9.Path))</visible>
 			</item>
 			<item id="10">
 				<description>Recently Added Music Video 10</description>
-				<label>$INFO[Window(Home).Property(LatestMusicVideo.10.Artist)] - $INFO[Window(Home).Property(LatestMusicVideo.10.Title)]</label>
-				<icon>$INFO[Window(Home).Property(LatestMusicVideo.10.Thumb)]</icon>
-				<thumb>$INFO[Window(Home).Property(LatestMusicVideo.10.Fanart)]</thumb>
-				<onclick>PlayMedia($INFO[Window(Home).Property(LatestMusicVideo.10.Path)])</onclick>
-				<visible>!IsEmpty(Window(Home).Property(LatestMusicVideo.10.Path))</visible>
+				<label>$INFO[Window(Home).Property(RecentMusicVideo.10.Artist)] - $INFO[Window(Home).Property(RecentMusicVideo.10.Title)]</label>
+				<icon>$INFO[Window(Home).Property(RecentMusicVideo.10.Thumb)]</icon>
+				<thumb>$INFO[Window(Home).Property(RecentMusicVideo.10.Fanart)]</thumb>
+				<onclick>$INFO[Window(Home).Property(RecentMusicVideo.10.Play)]</onclick>
+				<visible>!IsEmpty(Window(Home).Property(RecentMusicVideo.10.Path))</visible>
 			</item>
 		</content>
 	</include>

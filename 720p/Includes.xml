@@ -26,11 +26,7 @@
 	<include file="Viewtype_Landscape.xml" />		<!-- 52  -->
 	<include file="Viewtype_Logo.xml" />			<!-- 56  -->
 	<include file="Viewtype_LowList.xml" />			<!-- 905 -->
-	<include file="Viewtype_PVR_TVChannel.xml" />
-	<include file="Viewtype_PVR_EPG.xml" />
-	<include file="Viewtype_PVR_Timers.xml" />
-	<include file="Viewtype_PVR_Recordings.xml" />
-	<include file="Viewtype_PVR_EPGSearch.xml" />
+	<include file="Includes_PVR.xml" />
 	<include file="Viewtype_Panel_Square.xml" />		<!-- 559 -->
 	<include file="Viewtype_PictureGrid.xml" />		<!-- 500 -->
 	<include file="Viewtype_PosterAndFanart.xml" />		<!-- 550 -->
@@ -101,14 +97,14 @@
 		<width>1220</width>
 		<height>30</height>
 		<font>METF_Heading</font>
-		<textcolor>SettingsDetail</textcolor>
+		<textcolor>GlobalHeading</textcolor>
 		<align>center</align>
 		<aligny>center</aligny>
 		<include>Animation_HiddenByInfo</include>
 	</include>
 	<include name="Global_HeadingDetailVars">
 		<posx>1220</posx>
-		<width>450</width>
+		<width>720</width>
 		<height>30</height>
 		<font>METF_Heading</font>
 		<textcolor>GlobalHeading</textcolor>
@@ -294,7 +290,7 @@
 		<control type="group">
 			<posx>12</posx>
 			<posy>40</posy>
-			<visible>Weather.IsFetched + [[!Window.IsActive(visualisation) + !Skin.HasSetting(HideClockTemp)] | [Window.IsActive(visualisation) + Player.ShowInfo + !Skin.HasSetting(HideVisClock) + !Window.IsVisible(120)]] + !Window.IsVisible(601)<!--MyPVR--></visible>
+			<visible>Weather.IsFetched + [[!Window.IsActive(visualisation) + !Skin.HasSetting(HideClockTemp)] | [Window.IsActive(visualisation) + Player.ShowInfo + !Skin.HasSetting(HideVisClock) + !Window.IsVisible(120)]]</visible>
 			<control type="image">
 				<posx>1145</posx>
 				<posy>517</posy>
@@ -319,7 +315,7 @@
 	<include name="Global_TimeWeekdayDetails">
 		<posx>1241</posx>
 		<posy>546</posy>
-		<width>220</width>
+		<width>200</width>
 		<height>30</height>
 		<font>METF_Date</font>
 		<align>right</align>
@@ -373,7 +369,6 @@
 				<visible>Skin.HasSetting(ShowDate)</visible>
 			</control>
 			<control type="label">
-				<align>right</align>
 				<description>Day of Week</description>
 				<include>Global_TimeWeekdayDetails</include>
 				<label>$INFO[System.Date(DDD)]</label>
@@ -430,14 +425,14 @@
 	</include>
 	<include name="PlotBox">
 		<posx>300</posx>
-		<posy>525</posy>
+		<posy>565</posy>
 		<control type="textbox">
 			<include>Animation_FadedByMenu</include>
 			<include>Animation_OpenCloseFade</include>
 			<include>Animation_HiddenByInfo</include>
 			<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
 			<width>750</width>
-			<height>106</height>
+			<height>66</height>
 			<font>METF_PlotTextSmall</font>
 			<include condition="!Skin.HasSetting(AutoScrollFast)">AutoScrollShort</include>
 			<include condition="Skin.HasSetting(AutoScrollFast)">AutoScrollShortFast</include>
@@ -455,7 +450,7 @@
 			<height>135</height>
 			<font>METF_PlotTextMedium</font>
 			-->
-			<height>168</height>
+			<height>128</height>
 			<font>METF_PlotTextSmall</font>
 			<include condition="!Skin.HasSetting(AutoScrollFast)">AutoScrollLong</include>
 			<include condition="Skin.HasSetting(AutoScrollFast)">AutoScrollLongFast</include>
@@ -504,7 +499,7 @@
 		<control type="group">
 			<posx>20</posx>
 			<posy>520</posy>
-			<visible>Control.IsVisible(10) | Control.IsVisible(11) | Control.IsVisible(13) | Control.IsVisible(15) | Control.IsVisible(16) | Control.IsVisible(17)</visible>
+			<visible>Control.IsVisible(50) | Control.IsVisible(10) | Control.IsVisible(11) | Control.IsVisible(13) | Control.IsVisible(15) | Control.IsVisible(16) | Control.IsVisible(17)</visible>
 			<control type="image">
 				<description>TV Channel Icon</description>
 				<posx>0</posx>
@@ -950,7 +945,7 @@
 		<height>38</height>
 		<textoffsetx>0</textoffsetx>
 		<align>left</align>
-		<aligny>center</aligny>
+		<aligny>center</aligny>	
 		<font>METF_TitleTextMedium</font>
 		<textcolor>SettingsDetail</textcolor>
 	</include>
@@ -1348,12 +1343,24 @@
 			<label>$INFO[System.Time]</label>
 			<include>Animation_CommonFade</include>
 			<include>Animation_FadedByOSDSettings</include>
+			<include condition="StringCompare(Skin.String(OSDFade),Complete) + StringCompare(Skin.String(OSDFadeTime),5)">Animation_FadeOSD5</include>
+			<include condition="StringCompare(Skin.String(OSDFade),Complete) + StringCompare(Skin.String(OSDFadeTime),10)">Animation_FadeOSD10</include>
+			<include condition="StringCompare(Skin.String(OSDFade),Complete) + StringCompare(Skin.String(OSDFadeTime),15)">Animation_FadeOSD15</include>
+			<include condition="StringCompare(Skin.String(OSDFade),Complete) + StringCompare(Skin.String(OSDFadeTime),20)">Animation_FadeOSD20</include>
+			<include condition="StringCompare(Skin.String(OSDFade),Complete) + StringCompare(Skin.String(OSDFadeTime),25)">Animation_FadeOSD25</include>
+			<include condition="StringCompare(Skin.String(OSDFade),Complete) + StringCompare(Skin.String(OSDFadeTime),30)">Animation_FadeOSD30</include>
 		</control>
 	</include>
 	<include name="OSD_Player_Details">
 		<control type="group">
 			<include>Animation_CommonFade</include>
 			<include>Animation_FadedByOSDSettings</include>
+			<include condition="StringCompare(Skin.String(OSDFade),Complete) + StringCompare(Skin.String(OSDFadeTime),5)">Animation_FadeOSD5</include>
+			<include condition="StringCompare(Skin.String(OSDFade),Complete) + StringCompare(Skin.String(OSDFadeTime),10)">Animation_FadeOSD10</include>
+			<include condition="StringCompare(Skin.String(OSDFade),Complete) + StringCompare(Skin.String(OSDFadeTime),15)">Animation_FadeOSD15</include>
+			<include condition="StringCompare(Skin.String(OSDFade),Complete) + StringCompare(Skin.String(OSDFadeTime),20)">Animation_FadeOSD20</include>
+			<include condition="StringCompare(Skin.String(OSDFade),Complete) + StringCompare(Skin.String(OSDFadeTime),25)">Animation_FadeOSD25</include>
+			<include condition="StringCompare(Skin.String(OSDFade),Complete) + StringCompare(Skin.String(OSDFadeTime),30)">Animation_FadeOSD30</include>
 			<control type="label">
 				<include>OSD_Player_Labels</include>
 				<label>[UPPERCASE]$LOCALIZE[112][/UPPERCASE]</label>
@@ -1431,6 +1438,12 @@
 			<posy>0</posy>
 			<include>Animation_OpenCloseFade</include>
 			<include>Animation_FadedByOSDSettings</include>
+			<include condition="!StringCompare(Skin.String(OSDFade),Disabled) + StringCompare(Skin.String(OSDFadeTime),5)">Animation_FadeOSD5</include>
+			<include condition="!StringCompare(Skin.String(OSDFade),Disabled) + StringCompare(Skin.String(OSDFadeTime),10)">Animation_FadeOSD10</include>
+			<include condition="!StringCompare(Skin.String(OSDFade),Disabled) + StringCompare(Skin.String(OSDFadeTime),15)">Animation_FadeOSD15</include>
+			<include condition="!StringCompare(Skin.String(OSDFade),Disabled) + StringCompare(Skin.String(OSDFadeTime),20)">Animation_FadeOSD20</include>
+			<include condition="!StringCompare(Skin.String(OSDFade),Disabled) + StringCompare(Skin.String(OSDFadeTime),25)">Animation_FadeOSD25</include>
+			<include condition="!StringCompare(Skin.String(OSDFade),Disabled) + StringCompare(Skin.String(OSDFadeTime),30)">Animation_FadeOSD30</include>
 			<!-- Background Image -->
 			<control type="image">
 				<width>1280</width>
