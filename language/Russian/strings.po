@@ -116,10 +116,6 @@ msgctxt "#31125"
 msgid "Hide Video Root"
 msgstr "Убрать корневую папка видео"
 
-msgctxt "#31126"
-msgid "Download extra TV Show artwork"
-msgstr "Скачать дополнительные обои для Тв шоу"
-
 msgctxt "#31133"
 msgid "Mute"
 msgstr "Без звука"
@@ -909,8 +905,8 @@ msgid "Pressure"
 msgstr "Давление"
 
 msgctxt "#31704"
-msgid "Visibility"
-msgstr "Видимость"
+msgid "Clouds"
+msgstr "облака"
 
 msgctxt "#31705"
 msgid "Average"
@@ -929,8 +925,8 @@ msgid "Moon Phase"
 msgstr "Фаза Луны"
 
 msgctxt "#31709"
-msgid "Gusts"
-msgstr "Порывы"
+msgid "Precipitation"
+msgstr "Осадки"
 
 msgctxt "#31710"
 msgid "Use extended weather"
@@ -939,3 +935,22 @@ msgstr "Использовать расширенную погоду"
 msgctxt "#31711"
 msgid "Show weather forecast on home screen"
 msgstr "Показывать прогноз погоды в Главном меню"
+<<<<<<< HEAD
+=======
+
+msgctxt "#31712"
+msgid "Crop Thumbnails in Music Video Gallery View"
+msgstr "Обрезать миниатюры при просмотре музыкальной видео галереи"
+
+msgctxt "#31715"
+msgid "Icon"
+msgstr "Иконка"
+
+msgctxt "#31716"
+msgid "Wallpaper"
+msgstr "Обои"
+
+msgctxt "#31717"
+msgid "Precip"
+msgstr "Осадки"
+>>>>>>> 2e4f4ad... Update translations from Transifex.

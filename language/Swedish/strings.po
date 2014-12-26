@@ -116,10 +116,6 @@ msgctxt "#31125"
 msgid "Hide Video Root"
 msgstr "Göm rotmapp för video"
 
-msgctxt "#31126"
-msgid "Download extra TV Show artwork"
-msgstr "Ladda ner extra bilder för TV-avsnitt"
-
 msgctxt "#31133"
 msgid "Mute"
 msgstr "Tysta"
@@ -801,8 +797,8 @@ msgid "Pressure"
 msgstr "Tryck"
 
 msgctxt "#31704"
-msgid "Visibility"
-msgstr "Synlighet"
+msgid "Clouds"
+msgstr "Moln"
 
 msgctxt "#31705"
 msgid "Average"
@@ -821,8 +817,8 @@ msgid "Moon Phase"
 msgstr "Månfas"
 
 msgctxt "#31709"
-msgid "Gusts"
-msgstr "Vindbyar"
+msgid "Precipitation"
+msgstr "Nederbörd"
 
 msgctxt "#31710"
 msgid "Use extended weather"
@@ -831,3 +827,22 @@ msgstr "Använd utökat väder"
 msgctxt "#31711"
 msgid "Show weather forecast on home screen"
 msgstr "Visa väderprognos på hemskärmen"
+<<<<<<< HEAD
+=======
+
+msgctxt "#31712"
+msgid "Crop Thumbnails in Music Video Gallery View"
+msgstr "Beskär miniatyrer i galleriläge för musikvideos"
+
+msgctxt "#31715"
+msgid "Icon"
+msgstr "Ikon"
+
+msgctxt "#31716"
+msgid "Wallpaper"
+msgstr "Bakgrundsbild"
+
+msgctxt "#31717"
+msgid "Precip"
+msgstr "Nederbörd"
+>>>>>>> 2e4f4ad... Update translations from Transifex.

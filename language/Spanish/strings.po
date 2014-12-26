@@ -116,10 +116,6 @@ msgctxt "#31125"
 msgid "Hide Video Root"
 msgstr "Ocultar Raíz de Vídeos"
 
-msgctxt "#31126"
-msgid "Download extra TV Show artwork"
-msgstr "Descarga Imágenes extras de Series de TV"
-
 msgctxt "#31133"
 msgid "Mute"
 msgstr "Mute"
@@ -909,8 +905,8 @@ msgid "Pressure"
 msgstr "Presión atmosférica"
 
 msgctxt "#31704"
-msgid "Visibility"
-msgstr "Visibilidad"
+msgid "Clouds"
+msgstr "Nuboso"
 
 msgctxt "#31705"
 msgid "Average"
@@ -929,8 +925,8 @@ msgid "Moon Phase"
 msgstr "Fase Lunar"
 
 msgctxt "#31709"
-msgid "Gusts"
-msgstr "Rafagas"
+msgid "Precipitation"
+msgstr "Precipitación"
 
 msgctxt "#31710"
 msgid "Use extended weather"
@@ -939,3 +935,22 @@ msgstr "Usar tiempo extendido"
 msgctxt "#31711"
 msgid "Show weather forecast on home screen"
 msgstr "Ver Pronóstico del Clima en la pantalla principal"
+<<<<<<< HEAD
+=======
+
+msgctxt "#31712"
+msgid "Crop Thumbnails in Music Video Gallery View"
+msgstr "Recortar miniaturas en la vista Galería de Vídeos Musicales"
+
+msgctxt "#31715"
+msgid "Icon"
+msgstr "Icono"
+
+msgctxt "#31716"
+msgid "Wallpaper"
+msgstr "Fondos"
+
+msgctxt "#31717"
+msgid "Precip"
+msgstr "Lluvia"
+>>>>>>> 2e4f4ad... Update translations from Transifex.

@@ -71,3 +71,54 @@ msgstr "Saīsnes"
 msgctxt "#31468"
 msgid "Services"
 msgstr "Servisi"
+<<<<<<< HEAD
+=======
+
+msgctxt "#31469"
+msgid "Appearance"
+msgstr "Izskats"
+
+msgctxt "#31601"
+msgid "Live TV"
+msgstr "Tiešraides TV"
+
+msgctxt "#31605"
+msgid "Add Group"
+msgstr "Pievienot grupu"
+
+msgctxt "#31606"
+msgid "Rename Group"
+msgstr "Pārsaukt grupu"
+
+msgctxt "#31607"
+msgid "Delete Group"
+msgstr "Dzēst grupu"
+
+msgctxt "#31610"
+msgid "Scheduled Time"
+msgstr "Ieplānotais laiks"
+
+msgctxt "#31702"
+msgid "36 Hour Forecast"
+msgstr "36 stundu prognoze"
+
+msgctxt "#31703"
+msgid "Pressure"
+msgstr "Spiediens"
+
+msgctxt "#31704"
+msgid "Clouds"
+msgstr "Mākoņi"
+
+msgctxt "#31706"
+msgid "Maximum"
+msgstr "Maksimums"
+
+msgctxt "#31709"
+msgid "Precipitation"
+msgstr "nokrišņu daudzums"
+
+msgctxt "#31717"
+msgid "Precip"
+msgstr "Nokrišņi"
+>>>>>>> 2e4f4ad... Update translations from Transifex.

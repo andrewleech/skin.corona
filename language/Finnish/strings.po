@@ -1,4 +1,4 @@
-# XBMC Media Center language file
+# Kodi Media Center language file
 # Addon Name: Metropolis
 # Addon id: skin.metropolis
 # Addon Provider: Amra, Stoli, jingai
@@ -8,7 +8,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: alanwww1@xbmc.org\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: XBMC Translation Team\n"
+"Last-Translator: Kodi Translation Team\n"
 "Language-Team: Finnish (http://www.transifex.com/projects/p/xbmc-skins/language/fi/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -39,6 +39,14 @@ msgstr "Logo"
 msgctxt "#31133"
 msgid "Mute"
 msgstr "Mykistys"
+
+msgctxt "#31183"
+msgid "Viewtype"
+msgstr "Näyttötyyppi"
+
+msgctxt "#31207"
+msgid "Current"
+msgstr "Nykyinen"
 
 msgctxt "#31244"
 msgid "Playing"
@@ -173,9 +181,21 @@ msgid "Pressure"
 msgstr "Ilmanpaine"
 
 msgctxt "#31704"
-msgid "Visibility"
-msgstr "Näkyvyys"
+msgid "Clouds"
+msgstr "pilvistä"
 
 msgctxt "#31706"
 msgid "Maximum"
 msgstr "Maksimi"
+
+msgctxt "#31709"
+msgid "Precipitation"
+msgstr "Sademäärä"
+
+msgctxt "#31715"
+msgid "Icon"
+msgstr "Kuvake"
+
+msgctxt "#31717"
+msgid "Precip"
+msgstr "Sadem."

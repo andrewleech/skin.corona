@@ -64,10 +64,6 @@ msgctxt "#31024"
 msgid "Icon Home layout"
 msgstr "Διάταξη Εικονιδίων Αρχικής Οθόνης"
 
-msgctxt "#31025"
-msgid "Horizontal Text Home layout"
-msgstr "Διάταξη οριζόντιου κειμένου αρχικής οθόνης"
-
 msgctxt "#31031"
 msgid "Hide Movie Watched Status"
 msgstr "Απόκρυψη Κατάστασης Προβληθέντων Ταινιών"
@@ -119,6 +115,10 @@ msgstr "Διαχειριστής Αρχείων"
 msgctxt "#31125"
 msgid "Hide Video Root"
 msgstr "Απόκρυψη Αρχικού Φακέλου Βίντεο"
+
+msgctxt "#31126"
+msgid "Download extra TV Show artwork"
+msgstr "Λήψη επιπλέον εικόνων Τηλ. Σειρών"
 
 msgctxt "#31133"
 msgid "Mute"
@@ -909,8 +909,8 @@ msgid "Pressure"
 msgstr "Πίεση"
 
 msgctxt "#31704"
-msgid "Clouds"
-msgstr "Νεφοσκεπής"
+msgid "Visibility"
+msgstr "Ορατότητα"
 
 msgctxt "#31705"
 msgid "Average"
@@ -929,8 +929,8 @@ msgid "Moon Phase"
 msgstr "Φάση Σελήνης"
 
 msgctxt "#31709"
-msgid "Precipitation"
-msgstr "Υετός"
+msgid "Gusts"
+msgstr "Ριπές ανέμου"
 
 msgctxt "#31710"
 msgid "Use extended weather"
@@ -939,30 +939,3 @@ msgstr "Χρήση εκτεταμένου καιρού"
 msgctxt "#31711"
 msgid "Show weather forecast on home screen"
 msgstr "Εμφάνιση Πρόγνωσης στην Αρχ. Οθόνη"
-<<<<<<< HEAD
-=======
-
-msgctxt "#31712"
-msgid "Crop Thumbnails in Music Video Gallery View"
-msgstr "Περικοπή Μικρογραφιών στη Συλλογή Μουσικών Βίντεο"
-
-msgctxt "#31713"
-msgid "Custom Home Shortcut"
-msgstr "Προσαρμοσμένη συντόμευση Αρχικής σελίδας"
-
-msgctxt "#31714"
-msgid "Label and Shortcut"
-msgstr "Ετικέτα και συντόμευση"
-
-msgctxt "#31715"
-msgid "Icon"
-msgstr "Εικονίδιο"
-
-msgctxt "#31716"
-msgid "Wallpaper"
-msgstr "Υπόβαθρο"
-
-msgctxt "#31717"
-msgid "Precip"
-msgstr "Βροχή"
->>>>>>> 2e4f4ad... Update translations from Transifex.

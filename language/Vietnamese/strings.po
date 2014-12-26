@@ -120,6 +120,25 @@ msgctxt "#31702"
 msgid "36 Hour Forecast"
 msgstr "Thời Tiết - 36 Tiếng"
 
+msgctxt "#31704"
+msgid "Clouds"
+msgstr "Nhiều mây"
+
 msgctxt "#31706"
 msgid "Maximum"
 msgstr "Max"
+<<<<<<< HEAD
+=======
+
+msgctxt "#31709"
+msgid "Precipitation"
+msgstr "Tuyết rơi"
+
+msgctxt "#31716"
+msgid "Wallpaper"
+msgstr "Hình nền"
+
+msgctxt "#31717"
+msgid "Precip"
+msgstr "Mưa"
+>>>>>>> 2e4f4ad... Update translations from Transifex.

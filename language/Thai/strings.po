@@ -181,5 +181,26 @@ msgid "Pressure"
 msgstr "ความกดอากาศ"
 
 msgctxt "#31704"
+<<<<<<< HEAD
 msgid "Visibility"
 msgstr "ทัศนวิสัย"
+=======
+msgid "Clouds"
+msgstr "มีเมฆ"
+
+msgctxt "#31706"
+msgid "Maximum"
+msgstr "สูงสุด"
+
+msgctxt "#31709"
+msgid "Precipitation"
+msgstr "เกิดฝน"
+
+msgctxt "#31715"
+msgid "Icon"
+msgstr "ไอคอน"
+
+msgctxt "#31717"
+msgid "Precip"
+msgstr "ฝนตก"
+>>>>>>> 2e4f4ad... Update translations from Transifex.

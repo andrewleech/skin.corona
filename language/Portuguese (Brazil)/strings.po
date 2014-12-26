@@ -116,10 +116,13 @@ msgctxt "#31125"
 msgid "Hide Video Root"
 msgstr "Ocultar Raiz Vídeo"
 
+<<<<<<< HEAD
 msgctxt "#31126"
 msgid "Download extra TV Show artwork"
 msgstr "Download artes extras Seriados"
 
+=======
+>>>>>>> 2e4f4ad... Update translations from Transifex.
 msgctxt "#31133"
 msgid "Mute"
 msgstr "Mudo"
@@ -654,7 +657,23 @@ msgstr "Mostrar Estatus"
 
 msgctxt "#31472"
 msgid "Ended"
+<<<<<<< HEAD
 msgstr "Finalizada"
+=======
+msgstr "Terminado"
+
+msgctxt "#31473"
+msgid "unmixed"
+msgstr "Sem mixagem"
+
+msgctxt "#31474"
+msgid "Use one button to toggle subtitles"
+msgstr "Usar um botão para alternar legendas"
+
+msgctxt "#31475"
+msgid "Default OSD button"
+msgstr "Botão padrão de OSD"
+>>>>>>> 2e4f4ad... Update translations from Transifex.
 
 msgctxt "#31600"
 msgid "Enable Live TV (PVR) support"
@@ -693,9 +712,56 @@ msgid "Pressure"
 msgstr "Pressão"
 
 msgctxt "#31704"
-msgid "Visibility"
-msgstr "Visibilidade"
+msgid "Clouds"
+msgstr "Encoberto"
 
 msgctxt "#31706"
 msgid "Maximum"
 msgstr "Máximo"
+<<<<<<< HEAD
+=======
+
+msgctxt "#31707"
+msgid "Minimum"
+msgstr "Mínimo"
+
+msgctxt "#31708"
+msgid "Moon Phase"
+msgstr "Fase da Lua"
+
+msgctxt "#31709"
+msgid "Precipitation"
+msgstr "Precipitação"
+
+msgctxt "#31710"
+msgid "Use extended weather"
+msgstr "Use Clima extendido"
+
+msgctxt "#31711"
+msgid "Show weather forecast on home screen"
+msgstr "Exibir previsão de tempo na Página Inicial"
+
+msgctxt "#31712"
+msgid "Crop Thumbnails in Music Video Gallery View"
+msgstr "Corte miniaturas em Visualização da Galeira de Vídeos Musicais"
+
+msgctxt "#31713"
+msgid "Custom Home Shortcut"
+msgstr "Atalho Customizado Página Inicial"
+
+msgctxt "#31714"
+msgid "Label and Shortcut"
+msgstr "Etiqueta e Atalho"
+
+msgctxt "#31715"
+msgid "Icon"
+msgstr "Ícone"
+
+msgctxt "#31716"
+msgid "Wallpaper"
+msgstr "Papel de Parede"
+
+msgctxt "#31717"
+msgid "Precip"
+msgstr "Precip"
+>>>>>>> 2e4f4ad... Update translations from Transifex.

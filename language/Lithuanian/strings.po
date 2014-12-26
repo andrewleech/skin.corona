@@ -40,6 +40,41 @@ msgctxt "#31054"
 msgid "Logo"
 msgstr "Logotipas"
 
+<<<<<<< HEAD
+=======
+msgctxt "#31056"
+msgid "Enable Cover Art overlay"
+msgstr "Įjungti viršelio iliustracijos perdangą"
+
+msgctxt "#31057"
+msgid "Enable Song Info text overlay"
+msgstr "Įjungti dainos informacijos tekstinę perdangą"
+
+msgctxt "#31060"
+msgid "Show Recently Added Items"
+msgstr "Rodyti vėliausiai pridėtus elementus"
+
+msgctxt "#31108"
+msgid "Enable Debug Mode"
+msgstr "Įjungti derinimo režimą"
+
+msgctxt "#31109"
+msgid "Enable Debug Grid"
+msgstr "Įjungti derinimo tinklelį"
+
+msgctxt "#31118"
+msgid "Filemanager"
+msgstr "Failų tvarkyklė"
+
+msgctxt "#31125"
+msgid "Hide Video Root"
+msgstr "Slėpti vaizdo įrašų šakninį katalogą"
+
+msgctxt "#31126"
+msgid "Extra Artwork Downloader"
+msgstr "Papildomų iliustracijų siuntiklis"
+
+>>>>>>> 2e4f4ad... Update translations from Transifex.
 msgctxt "#31133"
 msgid "Mute"
 msgstr "Išjungti/nutildyti"
@@ -182,7 +217,35 @@ msgstr "Rodyti būseną"
 
 msgctxt "#31472"
 msgid "Ended"
+<<<<<<< HEAD
 msgstr "Pasibaigę"
+=======
+msgstr "Pasibaigęs"
+
+msgctxt "#31473"
+msgid "unmixed"
+msgstr "nesumaišyta"
+
+msgctxt "#31474"
+msgid "Use one button to toggle subtitles"
+msgstr "Naudoti vieną mygtuką subtitrų perjungimui"
+
+msgctxt "#31475"
+msgid "Default OSD button"
+msgstr "Numatytasis OSD lango mygtukas"
+
+msgctxt "#31476"
+msgid "OSD: Fade away when paused"
+msgstr "OSD: palaipsniui išnykti, kai pristabdyta"
+
+msgctxt "#31477"
+msgid "- Fade delay"
+msgstr "- Išnykimo uždelsimas"
+
+msgctxt "#31600"
+msgid "Enable Live TV (PVR) support"
+msgstr "Įjungti Live TV (PVR) palaikymą"
+>>>>>>> 2e4f4ad... Update translations from Transifex.
 
 msgctxt "#31601"
 msgid "Live TV"
@@ -213,9 +276,56 @@ msgid "Pressure"
 msgstr "Slėgis"
 
 msgctxt "#31704"
-msgid "Visibility"
-msgstr "Matomumas"
+msgid "Clouds"
+msgstr "Apsiniaukę"
 
 msgctxt "#31706"
 msgid "Maximum"
 msgstr "Maksimalus"
+<<<<<<< HEAD
+=======
+
+msgctxt "#31707"
+msgid "Minimum"
+msgstr "Minimalus"
+
+msgctxt "#31708"
+msgid "Moon Phase"
+msgstr "Mėnulio fazė"
+
+msgctxt "#31709"
+msgid "Precipitation"
+msgstr "Krituliai"
+
+msgctxt "#31710"
+msgid "Use extended weather"
+msgstr "Naudoti išplėstinius orus"
+
+msgctxt "#31711"
+msgid "Show weather forecast on home screen"
+msgstr "Rodyti orų prognozę pradžios ekrane"
+
+msgctxt "#31712"
+msgid "Crop Thumbnails in Music Video Gallery View"
+msgstr "Apkirpti miniatiūras muzikinių vaizdo klipų galerijos rodinyje"
+
+msgctxt "#31713"
+msgid "Custom Home Shortcut"
+msgstr "Individuali pradinio ekrano nuoroda"
+
+msgctxt "#31714"
+msgid "Label and Shortcut"
+msgstr "Etiketė ir nuoroda"
+
+msgctxt "#31715"
+msgid "Icon"
+msgstr "Piktograma"
+
+msgctxt "#31716"
+msgid "Wallpaper"
+msgstr "Darbalaukio fonas"
+
+msgctxt "#31717"
+msgid "Precip"
+msgstr "Debesuota"
+>>>>>>> 2e4f4ad... Update translations from Transifex.

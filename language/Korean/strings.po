@@ -117,8 +117,13 @@ msgid "Hide Video Root"
 msgstr "비디오 루트 숨기기"
 
 msgctxt "#31126"
+<<<<<<< HEAD
 msgid "Download extra TV Show artwork"
 msgstr "TV 쇼 로고, 가로, 배너 이미지를 다운로드"
+=======
+msgid "Extra Artwork Downloader"
+msgstr "추가 아트워크 다운로더"
+>>>>>>> 2e4f4ad... Update translations from Transifex.
 
 msgctxt "#31133"
 msgid "Mute"
@@ -844,6 +849,25 @@ msgctxt "#31472"
 msgid "Ended"
 msgstr "종료"
 
+<<<<<<< HEAD
+=======
+msgctxt "#31473"
+msgid "unmixed"
+msgstr "섞지 않음"
+
+msgctxt "#31474"
+msgid "Use one button to toggle subtitles"
+msgstr "자막을 토글하려면 버튼을 사용하세요"
+
+msgctxt "#31475"
+msgid "Default OSD button"
+msgstr "기본 OSD 단추"
+
+msgctxt "#31476"
+msgid "OSD: Fade away when paused"
+msgstr "OSD: 일시정지 상태일 때 흐리게"
+
+>>>>>>> 2e4f4ad... Update translations from Transifex.
 msgctxt "#31600"
 msgid "Enable Live TV (PVR) support"
 msgstr "Live TV (PVR) 사용"
@@ -881,9 +905,56 @@ msgid "Pressure"
 msgstr "기압"
 
 msgctxt "#31704"
-msgid "Visibility"
-msgstr "가시거리"
+msgid "Clouds"
+msgstr "구름"
 
 msgctxt "#31706"
 msgid "Maximum"
 msgstr "최대"
+<<<<<<< HEAD
+=======
+
+msgctxt "#31707"
+msgid "Minimum"
+msgstr "최저"
+
+msgctxt "#31708"
+msgid "Moon Phase"
+msgstr "달의 위상"
+
+msgctxt "#31709"
+msgid "Precipitation"
+msgstr "강수"
+
+msgctxt "#31710"
+msgid "Use extended weather"
+msgstr "확장 날씨 사용"
+
+msgctxt "#31711"
+msgid "Show weather forecast on home screen"
+msgstr "홈 화면에 날씨 예보 표시"
+
+msgctxt "#31712"
+msgid "Crop Thumbnails in Music Video Gallery View"
+msgstr "뮤직 비디오 갤러리 보기에서 썸네일 자르기"
+
+msgctxt "#31713"
+msgid "Custom Home Shortcut"
+msgstr "사용자 홈 바로가기"
+
+msgctxt "#31714"
+msgid "Label and Shortcut"
+msgstr "레이블과 바로가기"
+
+msgctxt "#31715"
+msgid "Icon"
+msgstr "아이콘"
+
+msgctxt "#31716"
+msgid "Wallpaper"
+msgstr "배경화면"
+
+msgctxt "#31717"
+msgid "Precip"
+msgstr "강수"
+>>>>>>> 2e4f4ad... Update translations from Transifex.
