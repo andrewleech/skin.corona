@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window type="dialog" id="2003">
-	<onload condition="Skin.HasSetting(TvTunes) + !SubString(Window(Videos).Property(CinemaExperienceRunning),True)">RunScript(script.tvtunes,backend=True&amp;loop=False)</onload>
+	<onload condition="Skin.HasSetting(TvTunes) + !SubString(Window(Videos).Property(CinemaExperienceRunning),True)">RunScript(script.tvtunes,backend=True)</onload>
 	<defaultcontrol always="true">7003</defaultcontrol>
 	<controls>
 		<control type="button" id="7050">
@@ -461,6 +461,26 @@
 				<texturefocus>buttons/button_fanartFO.png</texturefocus>
 				<include>Animation_ButtonFocus</include>
 			</control>
+			<!-- Artwork Downloader Button -->
+			<control type="button" id="20">
+				<include>VideoInfoButton</include>
+				<texturenofocus>osd/osd_button_channel_previous_nf.png</texturenofocus>
+				<texturefocus>osd/osd_button_channel_previous_fo.png</texturefocus>
+				<onclick condition="Container.Content(tvshows)">XBMC.RunScript(script.artwork.downloader, mode=gui, mediatype=tvshow, dbid=$INFO[ListItem.DBID])</onclick>
+				<onclick condition="Container.Content(movies)">XBMC.RunScript(script.artwork.downloader, mode=gui, mediatype=movie, dbid=$INFO[ListItem.DBID])</onclick>
+				<include>Animation_ButtonFocus</include>
+				<visible>System.HasAddon(script.artwork.downloader) + [Container.Content(movies) | Container.Content(tvshows)]</visible>
+			</control>
+			<!-- TV Tunes -->
+			<control type="button" id="21">
+				<include>VideoInfoButton</include>
+				<texturenofocus>buttons/button_tvtunes.png</texturenofocus>
+				<texturefocus>buttons/button_tvtunesFO.png</texturefocus>
+				<visible>Skin.HasSetting(TvTunes) + System.HasAddon(script.tvtunes) + [Container.Content(TVShows) | Container.Content(movies) | Container.Content(musicvideos)]</visible>
+				<include>Animation_ButtonFocus</include>
+				<label>$LOCALIZE[31956]</label>
+				<onclick>XBMC.RunScript(script.tvtunes,mode=solo)</onclick>
+			</control>						
 			<!-- Refresh -->
 			<control type="button" id="6">
 				<include>VideoInfoButton</include>
@@ -485,6 +505,18 @@
 				<include>VideoInfoButtonLabel</include>
 				<label>$LOCALIZE[31408]</label>
 				<visible>ControlGroup(7003).HasFocus(19)</visible>
+			</control>
+			<control type="label">
+				<description>Extra Artwork Downloader</description>
+				<include>VideoInfoButtonLabel</include>
+				<label>$LOCALIZE[31126]</label>
+				<visible>ControlGroup(7003).HasFocus(20)</visible>
+			</control>
+			<control type="label">
+				<description>Tv Tunes Downloader</description>
+				<include>VideoInfoButtonLabel</include>
+				<label>Tv Tunes Downloader</label>
+				<visible>ControlGroup(7003).HasFocus(21)</visible>
 			</control>
 			<control type="label">
 				<description>Trailer</description>
@@ -589,7 +621,7 @@
 					<width>324</width>
 					<height>182</height>
 					<texture>$INFO[ListItem.Thumb]</texture>
-					<aspectratio aligny="top" scalediffuse="false">scale</aspectratio>
+					<aspectratio aligny="center" scalediffuse="false">scale</aspectratio>
 					<visible>Container.Content(episodes)</visible>
 				</control>
 				<!-- Frame for fanart -->
