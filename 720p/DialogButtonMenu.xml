@@ -40,7 +40,7 @@
 					<include>SettingsShutdownMenu</include>
 					<label>20046</label>
 					<altlabel>20045</altlabel>
-					<onclick>XBMC.MasterMode</onclick>
+					<onclick>Kodi.MasterMode</onclick>
 					<visible>System.HasLocks</visible>
 				</control>
 				<control type="button" id="3111">
@@ -108,7 +108,7 @@
 					<description>Quit</description>
 					<include>SettingsShutdownMenu</include>
 					<label>$LOCALIZE[13012]</label>
-					<onclick>XBMC.Quit()</onclick>
+					<onclick>Kodi.Quit()</onclick>
 				</control>
 			</control>
 		</control>

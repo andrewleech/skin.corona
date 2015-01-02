@@ -17,7 +17,7 @@
   					<!-- <onleft>32</onleft>
 	  				<onright>70</onright> -->
 			        <onright>select</onright>
-			        <onleft>XBMC.Action(ParentDir)</onleft>
+			        <onleft>Kodi.Action(ParentDir)</onleft>
 					<pagecontrol>70</pagecontrol>
 					<scrolltime>200</scrolltime>
 					<itemlayout height="60" width="700">

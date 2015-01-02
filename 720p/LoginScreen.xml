@@ -19,7 +19,7 @@
 				<onright>105</onright>
 				<texturenofocus>buttons/button_exit.png</texturenofocus>
 				<texturefocus>buttons/button_exitFO.png</texturefocus>
-				<onclick>XBMC.Quit()</onclick>
+				<onclick>Kodi.Quit()</onclick>
 				<include>Animation_ButtonFocus</include>
 			</control>
 			<!-- Shutdown Button -->
@@ -31,7 +31,7 @@
 				<onright>106</onright>
 				<texturenofocus>buttons/button_shutdown.png</texturenofocus>
 				<texturefocus>buttons/button_shutdownFO.png</texturefocus>
-				<onclick>XBMC.ShutDown()</onclick>
+				<onclick>Kodi.ShutDown()</onclick>
 				<include>Animation_ButtonFocus</include>
 			</control>
 			<!-- Suspend Button -->
@@ -43,7 +43,7 @@
 				<onright>107</onright>
 				<texturenofocus>buttons/button_suspend.png</texturenofocus>
 				<texturefocus>buttons/button_suspendFO.png</texturefocus>
-				<onclick>XBMC.Suspend()</onclick>
+				<onclick>Kodi.Suspend()</onclick>
 				<include>Animation_ButtonFocus</include>
 			</control>
 			<!-- reboot Button -->
@@ -55,7 +55,7 @@
 				<onright>104</onright>
 				<texturenofocus>buttons/button_reboot.png</texturenofocus>
 				<texturefocus>buttons/button_rebootFO.png</texturefocus>
-				<onclick>XBMC.Reboot()</onclick>
+				<onclick>Kodi.Reboot()</onclick>
 				<include>Animation_ButtonFocus</include>
 			</control>
 			<!-- Button Text -->

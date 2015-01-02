@@ -442,7 +442,7 @@
 				<texturefocus>buttons/button_cinemaFO.png</texturefocus>
 				<onclick>Playlist.Clear</onclick>
 				<onclick>Dialog.Close(MovieInformation)</onclick>
-				<onclick>XBMC.RunScript(script.cinema.experience)</onclick>
+				<onclick>Kodi.RunScript(script.cinema.experience)</onclick>
 				<include>Animation_ButtonFocus</include>
 				<visible>Container.Content(movies) + system.hasaddon(script.cinema.experience) + !SubString(Container.FolderPath,plugin)</visible>
 			</control>
