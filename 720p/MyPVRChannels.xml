@@ -21,7 +21,7 @@
   					<!--<onleft>100</onleft>
 	  				<onright>100</onright>-->
 			        <onright>select</onright>
-			        <onleft>Kodi.Action(ParentDir)</onleft>
+			        <onleft>XBMC.Action(ParentDir)</onleft>
 					<viewtype label="535">list</viewtype>
 					<pagecontrol>70</pagecontrol>
 					<scrolltime>200</scrolltime>

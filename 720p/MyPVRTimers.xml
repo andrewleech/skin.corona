@@ -55,7 +55,7 @@
 					<<!-- onleft>35</onleft>
 					<onright>73</onright> -->
 			        <onright>select</onright>
-			        <onleft>Kodi.Action(ParentDir)</onleft>
+			        <onleft>XBMC.Action(ParentDir)</onleft>
 					<pagecontrol>73</pagecontrol>
 					<scrolltime>200</scrolltime>
 					<itemlayout height="40">

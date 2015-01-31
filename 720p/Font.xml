@@ -114,6 +114,11 @@
 			<size>32</size>
 		</font>
 		<font>
+			<name>METF_EPGTitleText</name>
+			<filename>MET_FontinSansSmallCaps.ttf</filename>
+			<size>28</size>
+		</font>
+		<font>
 			<name>METF_TitleTextMedium</name>
 			<filename>MET_FontinSansSmallCaps.ttf</filename>
 			<size>34</size>

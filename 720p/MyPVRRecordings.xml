@@ -17,7 +17,7 @@
 				<!-- <onleft>34</onleft>
 				<onright>72</onright> -->
 		        <onright>select</onright>
-		        <onleft>Kodi.Action(ParentDir)</onleft>
+		        <onleft>XBMC.Action(ParentDir)</onleft>
 				<!-- <onup>13</onup>
 				<ondown>13</ondown> -->
 				<pagecontrol>72</pagecontrol>
@@ -107,7 +107,7 @@
 				<showonepage>false</showonepage>
 				<orientation>vertical</orientation>
 			</control>
-			<control type="group">
+<!-- 			<control type="group">
 				<posx>80</posx>
 				<posy>100</posy>
 				<control type="image">
@@ -131,7 +131,7 @@
 					<include>LiveTVLabel</include>
 					<info>ListItem.Title</info>
 				</control>
-			</control>
+			</control> -->
 			<!-- TV Channel Plot (Bottom) -->
 			<include>LiveTVPlot</include>
 		</control>	

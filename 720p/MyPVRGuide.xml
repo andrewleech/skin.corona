@@ -4,7 +4,13 @@
 	<allowoverlay>no</allowoverlay>
 	<views>10,11,12,13</views>
 	<controls>
-		<include>Global_Background</include>
+		<!-- <include>Global_Background</include> -->
+		<control type="image">
+			<include>Dimensions_Fullscreen</include>
+			<texture background="true" fallback="background_lower.png">$INFO[Skin.String(CustomBackground)]</texture>
+			<colordiffuse>BackgroundColor</colordiffuse>
+		</control>
+
 		<include>PVR_Headers</include>
 		<control type="group" id="50">
 		<control type="group">
@@ -12,23 +18,24 @@
 			<visible>Control.IsVisible(10)</visible>
 			<control type="image">
 				<description>separator image</description>
-				<left>80</left>
-				<top>101</top>
-				<width>1100</width>
+				<left>30</left>
+				<top>70</top>
+				<width>1240</width>
 				<height>1</height>
 				<colordiffuse>88FFFFFF</colordiffuse>
 				<texture>VideoInfoLine.png</texture>
 			</control>
+
 			<control type="epggrid" id="10">
 				<viewtype label="19032">list</viewtype>
 				<description>EPG Grid</description>
-				<left>80</left>
-				<top>71</top>
-				<width>1135</width>
-				<height>419</height>
+				<left>20</left>
+				<top>40</top>
+				<width>1245</width>
+				<height>530</height>
 				<pagecontrol>10</pagecontrol>
-				<scrolltime>350</scrolltime>
-				<timeblocks>40</timeblocks>
+				<scrolltime>150</scrolltime>
+				<timeblocks>30</timeblocks>
 				<rulerunit>6</rulerunit>
 				<progresstexture border="0,48,18,14" colordiffuse="ArrowDiffuse">PVR-EpgProgressIndicator.png</progresstexture>
 				<onleft>101</onleft>
@@ -36,11 +43,11 @@
 				<onup>10</onup>
 				<ondown>10</ondown>
 				<onback>7000</onback> 
-				<rulerlayout height="35" width="40">
+				<rulerlayout height="35" width="37">
 					<control type="label" id="2">
 						<left>10</left>
 						<top>0</top>
-						<width>34</width>
+						<width>40</width>
 						<height>29</height>
 						<font>METF_TitleText</font>
 						<aligny>center</aligny>
@@ -49,19 +56,20 @@
 						<label>$INFO[ListItem.Label]</label>
 					</control>
 				</rulerlayout>
-				<channellayout height="48" width="280">
+
+				<channellayout height="31" width="259">
 					<control type="image">
 						<left>0</left>
 						<top>0</top>
-						<width>270</width>
-						<height>48</height>
+						<width>250</width>
+						<height>31</height>
 						<texture border="2">tvguide-program-grey-nofocus.png</texture>
 					</control>
 					<control type="label">
 						<left>5</left>
-						<top>5</top>
-						<width>80</width>
-						<height>35</height>
+						<top>0</top>
+						<width>40</width>
+						<height>31</height>
 						<font>METF_TitleText</font>
 						<align>left</align>
 						<aligny>center</aligny>
@@ -70,7 +78,7 @@
 						<info>ListItem.ChannelNumber</info>
 					</control>
 					<control type="image">
-						<left>45</left>
+						<left>35</left>
 						<top>4</top>
 						<width>45</width>
 						<height>44</height>
@@ -78,10 +86,10 @@
 						<aspectratio>keep</aspectratio>
 					</control>
 					<control type="label" id="1">
-						<left>94</left>
+						<left>54</left>
 						<top>0</top>
-						<width>160</width>
-						<height>48</height>
+						<width>200</width>
+						<height>31</height>
 						<font>METF_MediaDetails</font>
 						<aligny>center</aligny>
 						<selectedcolor>DialogTextFO</selectedcolor>
@@ -89,28 +97,29 @@
 						<label>$INFO[ListItem.ChannelName]</label>
 					</control>
 				</channellayout>
-				<focusedchannellayout height="48" width="280">
+
+				<focusedchannellayout height="31" width="259">
 					<control type="image">
 						<left>0</left>
 						<top>0</top>
-						<width>270</width>
-						<height>48</height>
+						<width>250</width>
+						<height>31</height>
 						<texture border="2">tvguide-program-grey-nofocus.png</texture>
 						<visible>!Control.HasFocus(10)</visible>
 					</control>
 					<control type="image">
 						<left>0</left>
 						<top>0</top>
-						<width>270</width>
-						<height>48</height>
+						<width>250</width>
+						<height>31</height>
 						<texture border="2">tvguide-program-grey-focus.png</texture>
 						<visible>Control.HasFocus(10)</visible>
 					</control>
 					<control type="label">
 						<left>5</left>
-						<top>5</top>
-						<width>80</width>
-						<height>35</height>
+						<top>0</top>
+						<width>40</width>
+						<height>31</height>
 						<font>METF_TitleText</font>
 						<align>left</align>
 						<aligny>center</aligny>
@@ -122,15 +131,15 @@
 						<left>45</left>
 						<top>4</top>
 						<width>45</width>
-						<height>44</height>
+						<height>31</height>
 						<texture>$INFO[ListItem.Icon]</texture>
 						<aspectratio>keep</aspectratio>
 					</control>
 					<control type="label" id="1">
-						<left>94</left>
+						<left>54</left>
 						<top>0</top>
-						<width>160</width>
-						<height>48</height>
+						<width>200</width>
+						<height>31</height>
 						<font>METF_MediaDetails</font>
 						<aligny>center</aligny>
 						<selectedcolor>DialogTextFO</selectedcolor>
@@ -138,10 +147,11 @@
 						<label>$INFO[ListItem.ChannelName]</label>
 					</control>
 				</focusedchannellayout>
-				<itemlayout height="48" width="40">
+				
+				<itemlayout height="31" width="37">
 					<control type="image" id="2">
-						<width>40</width>
-						<height>48</height>
+						<width>37</width>
+						<height>31</height>
 						<left>0</left>
 						<top>0</top>
 						<aspectratio>stretch</aspectratio>
@@ -152,7 +162,7 @@
 						<top>3</top>
 						<width>20</width>
 						<height>25</height>
-						<font>METF_TitleText</font>
+						<font>METF_EPGTitleText</font>
 						<aligny>center</aligny>
 						<selectedcolor>DialogTextFO</selectedcolor>
 						<align>left</align>
@@ -183,17 +193,17 @@
 						<visible>ListItem.HasRecording + !ListItem.IsRecording + !ListItem.HasTimer</visible>
 					</control>
 				</itemlayout>
-				<focusedlayout height="48" width="40">
+				<focusedlayout height="31" width="37">
 					<control type="image" id="14">
-						<width>40</width>
-						<height>48</height>
+						<width>37</width>
+						<height>31</height>
 						<left>0</left>
 						<top>0</top>
 						<texture border="5">folder-focus.png</texture>
 					</control>
 					<control type="image" id="2">
-						<width>40</width>
-						<height>48</height>
+						<width>37</width>
+						<height>31</height>
 						<left>0</left>
 						<top>0</top>
 						<aspectratio>stretch</aspectratio>
@@ -236,6 +246,7 @@
 					</control>
 				</focusedlayout>
 			</control>
+			
 			<control type="group">
 				<visible>!IsEmpty(ListItem.Label)</visible>
 				<left>80</left>
@@ -248,7 +259,7 @@
 					<texture background="true">$INFO[ListItem.Icon]</texture>
 					<aspectratio align="center" aligny="top">keep</aspectratio>
 				</control>
-				<control type="label">
+				<!-- <control type="label">
 					<left>280</left>
 					<top>0</top>
 					<width>840</width>
@@ -256,9 +267,10 @@
 					<label>$INFO[ListItem.Genre]</label>
 					<font>METF_TitleTextMedium</font>
 					<textcolor>White</textcolor>
-				</control>
+				</control> -->
 			</control>
 		</control>
+
 		<control type="group">
 			<description>TV Guide Now</description>
 			<visible>Control.IsVisible(11)</visible>
@@ -337,7 +349,7 @@
 					<onleft>101</onleft>
 					<onright>76</onright>
 					<pagecontrol>76</pagecontrol>
-					<scrolltime>200</scrolltime>
+					<scrolltime>100</scrolltime>
 					<itemlayout height="40">
 						<control type="image">
 							<left>0</left>
@@ -604,6 +616,7 @@
 				</control>
 			</control>
 		</control>
+
 		<control type="group">
 			<description>TV Guide Next</description>
 			<visible>Control.IsVisible(12)</visible>
@@ -1257,7 +1270,7 @@
 		</control>
 
 			<!-- TV Channel Plot (Bottom) -->
-			<include>LiveTVPlot</include>
+			<include>LiveTVPlotLow</include>
 		
 		<!--  Side Buttons -->
 		<control type="group">
@@ -1278,7 +1291,7 @@
 		</control>
 
 		<include>PVR_Headers</include>
-		<include>Global_Weather</include>
+		<!-- <include>Global_Weather</include> -->
 		<include>Global_Time</include>
 		<include condition="Skin.HasSetting(DebugGrid)">Object_DebugGrid</include>
 		<include condition="Skin.HasSetting(DebugMode)">Debug</include>
