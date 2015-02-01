@@ -3057,7 +3057,7 @@
 				<control type="group">
 					<posx>10</posx>
 					<posy>75</posy>
-					<control type="wraplist" id="8004">
+					<control type="wraplist" id="8004" height="430" >
 						<include>Animation_CommonFade</include>
 						<include>Animation_FadedByMenu</include>
 						<animation effect="slide" start="0,0"  end="76,0" time="0" condition="StringCompare(Container(8004).NumItems,4)">conditional</animation>
@@ -3080,7 +3080,7 @@
 						<scrolltime>200</scrolltime>
 						<preloaditems>2</preloaditems>
 						<visible>Container(9000).HasFocus(11)</visible>
-						<itemlayout height="152" width="152">
+						<itemlayout height="142" width="142">
 							<control type="image">
 								<posx>0</posx>
 								<posy>0</posy>
@@ -3093,7 +3093,7 @@
 								<texture diffuse="frames/EpisodeMatte.png">$INFO[ListItem.Icon]</texture>
 							</control>
 						</itemlayout>
-						<focusedlayout height="152" width="152">
+						<focusedlayout height="142" width="142">
 							<control type="image">
 								<posx>0</posx>
 								<posy>0</posy>
