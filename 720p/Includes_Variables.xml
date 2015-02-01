@@ -229,7 +229,7 @@
 	<constant name="WeatherHomeLeft">305</constant>
 	<constant name="WeatherHomeTop">530</constant>
 	<constant name="WeatherHomeHeight">180</constant>
-	<constant name="WeatherHomeWidth">160</constant>
+	<constant name="WeatherHomeWidth">180</constant>
 	<constant name="WeatherPanelLeft">210</constant>
 	<constant name="Weather7DayWidth">147</constant>
 	<constant name="Weather7DayHeight">485</constant>
