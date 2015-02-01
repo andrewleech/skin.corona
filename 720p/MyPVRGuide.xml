@@ -170,7 +170,7 @@
 					</control>
 					<control type="image">
 						<left>6</left>
-						<top>28</top>
+						<top>0</top>
 						<width>24</width>
 						<height>16</height>
 						<texture>PVR-IsRecording.png</texture>
@@ -178,7 +178,7 @@
 					</control>
 					<control type="image">
 						<left>6</left>
-						<top>28</top>
+						<top>0</top>
 						<width>16</width>
 						<height>16</height>
 						<texture>PVR-HasTimer.png</texture>
@@ -186,7 +186,7 @@
 					</control>
 					<control type="image">
 						<left>6</left>
-						<top>28</top>
+						<top>0</top>
 						<width>16</width>
 						<height>16</height>
 						<texture>PVR-HasRecording.png</texture>
@@ -214,7 +214,7 @@
 						<top>3</top>
 						<width>20</width>
 						<height>25</height>
-						<font>METF_TitleText</font>
+						<font>METF_EPGTitleText</font>
 						<aligny>center</aligny>
 						<selectedcolor>DialogTextFO</selectedcolor>
 						<align>left</align>
@@ -222,7 +222,7 @@
 					</control>
 					<control type="image">
 						<left>6</left>
-						<top>28</top>
+						<top>0</top>
 						<width>24</width>
 						<height>16</height>
 						<texture>PVR-IsRecording.png</texture>
@@ -230,7 +230,7 @@
 					</control>
 					<control type="image">
 						<left>6</left>
-						<top>28</top>
+						<top>0</top>
 						<width>16</width>
 						<height>16</height>
 						<texture>PVR-HasTimer.png</texture>
@@ -238,7 +238,7 @@
 					</control>
 					<control type="image">
 						<left>6</left>
-						<top>28</top>
+						<top>0</top>
 						<width>16</width>
 						<height>16</height>
 						<texture>PVR-HasRecording.png</texture>
