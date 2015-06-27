@@ -949,6 +949,15 @@
 				<include condition="![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)]">Submenu_Button1</include>
 				<include condition="Skin.HasSetting(Home2)">Submenu_Button2</include>
 				<include condition="Skin.HasSetting(Home3)">Submenu_Button3</include>
+				<label>$LOCALIZE[334]</label>
+				<onclick>CleanLibrary(video)</onclick>
+				<visible>Skin.HasSetting(NoVideos)</visible>
+				<visible>Container(9000).HasFocus(2) + !Skin.HasSetting(NoMoviesSubs)</visible>
+			</control>
+			<control type="button" id="91122">
+				<include condition="![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)]">Submenu_Button1</include>
+				<include condition="Skin.HasSetting(Home2)">Submenu_Button2</include>
+				<include condition="Skin.HasSetting(Home3)">Submenu_Button3</include>
 				<label>$LOCALIZE[653]</label>
 				<onclick>UpdateLibrary(video)</onclick>
 				<visible>Skin.HasSetting(NoVideos)</visible>
@@ -1132,6 +1141,15 @@
 				<include condition="![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)]">Submenu_Button1</include>
 				<include condition="Skin.HasSetting(Home2)">Submenu_Button2</include>
 				<include condition="Skin.HasSetting(Home3)">Submenu_Button3</include>
+				<label>$LOCALIZE[334]</label>
+				<onclick>CleanLibrary(video)</onclick>
+				<visible>Skin.HasSetting(NoVideos)</visible>
+			<visible>Container(9000).HasFocus(3) + !Skin.HasSetting(NoTVShowsSubs)</visible>
+			</control>
+			<control type="button" id="91222">
+				<include condition="![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)]">Submenu_Button1</include>
+				<include condition="Skin.HasSetting(Home2)">Submenu_Button2</include>
+				<include condition="Skin.HasSetting(Home3)">Submenu_Button3</include>
 				<label>$LOCALIZE[653]</label>
 				<onclick>UpdateLibrary(video)</onclick>
 				<visible>Skin.HasSetting(NoVideos)</visible>
@@ -1284,11 +1302,19 @@
 				<include condition="![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)]">Submenu_Button1</include>
 				<include condition="Skin.HasSetting(Home2)">Submenu_Button2</include>
 				<include condition="Skin.HasSetting(Home3)">Submenu_Button3</include>
+				<label>$LOCALIZE[334]</label>
+				<onclick>CleanLibrary(video)</onclick>
+				<visible>Container(9000).HasFocus(4) + !Skin.HasSetting(NoVideoSubs)</visible>
+			</control>
+			<control type="button" id="91018">
+				<include condition="![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)]">Submenu_Button1</include>
+				<include condition="Skin.HasSetting(Home2)">Submenu_Button2</include>
+				<include condition="Skin.HasSetting(Home3)">Submenu_Button3</include>
 				<label>$LOCALIZE[653]</label>
 				<onclick>UpdateLibrary(video)</onclick>
 				<visible>Container(9000).HasFocus(4) + !Skin.HasSetting(NoVideoSubs)</visible>
 			</control>
-			<control type="button" id="91018">
+			<control type="button" id="91019">
 				<include condition="![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)]">Submenu_Button1</include>
 				<include condition="Skin.HasSetting(Home2)">Submenu_Button2</include>
 				<include condition="Skin.HasSetting(Home3)">Submenu_Button3</include>
@@ -1544,11 +1570,19 @@
 				<include condition="![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)]">Submenu_Button1</include>
 				<include condition="Skin.HasSetting(Home2)">Submenu_Button2</include>
 				<include condition="Skin.HasSetting(Home3)">Submenu_Button3</include>
+				<label>$LOCALIZE[334]</label>
+				<onclick>CleanLibrary(music)</onclick>
+				<visible>Container(9000).HasFocus(7) + !Skin.HasSetting(NoMusicSubs)</visible>
+			</control>
+			<control type="button" id="91724">
+				<include condition="![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)]">Submenu_Button1</include>
+				<include condition="Skin.HasSetting(Home2)">Submenu_Button2</include>
+				<include condition="Skin.HasSetting(Home3)">Submenu_Button3</include>
 				<label>$LOCALIZE[653]</label>
 				<onclick>UpdateLibrary(music)</onclick>
 				<visible>Container(9000).HasFocus(7) + !Skin.HasSetting(NoMusicSubs)</visible>
 			</control>
-			<control type="button" id="91724">
+			<control type="button" id="91725">
 				<include condition="![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)]">Submenu_Button1</include>
 				<include condition="Skin.HasSetting(Home2)">Submenu_Button2</include>
 				<include condition="Skin.HasSetting(Home3)">Submenu_Button3</include>
@@ -1713,6 +1747,14 @@
 				<visible>Skin.HasSetting(NoVideos)</visible>
 			</control>
 			<control type="button" id="92120">
+				<include condition="![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)]">Submenu_Button1</include>
+				<include condition="Skin.HasSetting(Home2)">Submenu_Button2</include>
+				<include condition="Skin.HasSetting(Home3)">Submenu_Button3</include>
+				<label>$LOCALIZE[334]</label>
+				<onclick>CleanLibrary(video)</onclick>
+				<visible>Skin.HasSetting(NoVideos)</visible>
+			</control>
+			<control type="button" id="92121">
 				<include condition="![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)]">Submenu_Button1</include>
 				<include condition="Skin.HasSetting(Home2)">Submenu_Button2</include>
 				<include condition="Skin.HasSetting(Home3)">Submenu_Button3</include>
